@@ -4,15 +4,15 @@
 
 // Pour initialiser un nombre, il suffit de l'écrire sans (""), (''), (``)
 
-const a = 5 * 10;
-const b = 10 / 2;
-const c = 15 - 5;
-const d = 20 + 10;
-const f = 5 % 10; 
+const A = 5 * 10;
+const B = 10 / 2;
+const C = 15 - 5;
+const D = 20 + 10;
+const F = 5 % 10; 
 
 // L'on peut effectuer tout type de calcul 
 
-const e = a + b;
+const E = A + B;
 // console.log(e)
 
 // Addition 
@@ -51,6 +51,14 @@ document.write(`Résultat avec (++) ` + h + `<br>`)
 let i = 50;
 i--;
 document.write(`Résultat avec (--) ` + i + `<br>`)
+
+let o = 1;
+// console.clear(); // Nettoyer la console
+// console.log(o);
+let j = ++o; // Incrémente puis affecte nouvelle valeur incrémentée 
+// let j = o++; // Affecte valeur d'origine puis incrémente valeur d'origine
+// console.log(j);
+// console.log(o);
 
 // Exercice : //
 // Récupérer dans un prompt la valeur souhaitée par l'utilisateur

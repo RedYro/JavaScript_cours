@@ -19,7 +19,9 @@ Commentaire d'un bloc de texte sur plusieurs lignes
     ATTENTION on utilise les préfixe seulement lors de l'initialisation
 */
 
-const test = `Hello World`;
+// La déclaration "const" permet de créer une constante accessible uniquement en lecture. Sa valeur ne peut être modifiée par des réaffectations ultérieures. Une constante ne peut être déclarée à nouveau.
+// Par convention, on écrit les constantes en majuscule pour les reconnaître.  
+const TEST = `Hello World`;
 // console.log(test);
 // Pour afficher une info saisie ou une erreur produite lors de la programmation
 // test = `Hello Guys !` -> provoque une erreur : une constante ne peut être modifiée

@@ -17,8 +17,12 @@ Il existe plusieurs types de valeurs, que l'on peut assigner à nos variables
 
 // String //
 
+// Plusieurs possibilités d'initialiser une chaîne de caractères : //
+// ("") double quote
 let variable = "test";
+// ('') simple quote
 let variable2 = 'test2';
+// (``) back quote
 let variable3 = `test3`;
 
 // En JS, la convention de nommage est le CamelCase : chaque nouveau mot de notre variable doit être en majuscule
@@ -29,6 +33,14 @@ let monTexte2 = 'Voici une phrase écrite dans une simple quote aujourd\'hui';
 // console.log(monTexte2);
 let monTexte3 = `Voici une phrase écrite aujourd'hui`;
 // console.log(monTexte3);
+
+// const BIENVENUE = `Aujourd'hui c'est l'arrivée de Grégory`;
+let bienvenue = `Aujourd'hui c'est l'arrivée de Grégory`;
+document.write(bienvenue)
+const PRENOM = `Grégory`; 
+bienvenue = `<br>` + `Aujourd'hui c'est l'arrivée de ${PRENOM}` + `<br>`;
+// bienvenue = bienvenue + ` ` + PRENOM + `<br>`; 
+document.write(bienvenue)
 
 // Number //
 
@@ -61,5 +73,6 @@ document.write(chiffre);
 // alert(`Ceci est un message d'alerte !`); // Permet d'afficher un message d'alerte
 // confirm(`Confirmez-vous ?`); // Permet de confirmer une action
 // prompt(`Voici un "prompt"`); // Permet de récupérer une donnée de l'utilisateur
-let monAge = prompt(`Quel est votre âge ?`);
-console.log(monAge);
+
+// let monAge = prompt(`Quel est votre âge ?`);
+// console.log(monAge);
