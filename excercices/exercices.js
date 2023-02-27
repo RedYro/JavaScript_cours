@@ -121,20 +121,38 @@ console.log(`Bonjour ` + PRENOM + `, tu as ` + age + ` ans.`);
 // // --------------------------
     // EXERCICE 6 : 
 // // --------------------------
+document.write(`<h2> Exercice 6 </h2>`);
 // Utilisez la méthode "slice" pour renvoyer le mot "banane".
 let txt = `I can eat bananas all day`;
+let txtBis = txt.slice(9, 17);
+document.write(txtBis);
+let txtTer = txt.slice(9, 16);
+document.write(`<br>`, txtTer);
 
-// Alerter le nombre d'éléments dans un tableau en utilisant la bonne méthode.
+// Alerter sur le nombre d'éléments dans un tableau en utilisant la bonne méthode.
 let cars = [`Volvo`, `Jeep`, `Mercedes`];
+alert(`Il y a `+ cars.length + ` éléments dans le tableau`);
 
 // Utilisez la méthode "splice" pour supprimer "Orange" et "Apple" de 'fruits'.
 let fruits = [`Banane`, `Orange`, `Pomme`, `Kiwi`];
+fruits.splice(1, 2);
+document.write(`<br>`, fruits);
 
 // Choisissez l'opérateur conditionnel (ternaire) correct pour alerter "Trop jeune" si l'âge est inférieur à 18 ans, sinon alerter "Assez vieux".
+let ageAdult = parseFloat(prompt(`Indiquez votre âge`));
+let isAdult = (ageAdult >= 18) ? alert(`Assez vieux`) : alert(`Trop jeune`)
 
 // On reçoit un nombre, par exemple "let number = 42"; comment savoir de combien de dizaines (4) et de combien d'unités (2) est composé ce nombre ? (opérateur "modulo")
+let number = 42
+let numberModulo1 = number % 19;
+let numberModulo2 = number % 10;
+document.write(`<br>`, `Il y a `, numberModulo1, ` dizaines et `, numberModulo2, ` unités dans 42`);
 
 // Utilisez la méthode "string" correcte pour remplacer le mot "Hello" par le mot "Welcome" // Cherchez sur internet // 
 let txt2 = `Hello World`;
+document.write(`<br>`, txt2.replace(`Hello`, `Welcome`));
 
 // Utilisez des caractères d'échappement pour alerter (We are "Vikings").
+// let answer = `We are "Vikings"`;
+let answer = "We are \"Vikings\"";
+alert(answer);
