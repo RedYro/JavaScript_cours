@@ -223,7 +223,7 @@ document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrM
 
 function nameAge(){
     let name = prompt(`Entrez votre prénom`);
-    let lettersOnly =  /^[A-Za-zéèÉÈ]+$/;
+    let lettersOnly =  /^[A-Za-zéèÉÈ]+$/; // /^[A-Za-zéèÉÈ]+$/ => lettres seulement avec caractères spéciaux "é", "É", "è", "È" inclus; nombres => exclus
     if(name.match(lettersOnly)){
         alert(`Bonjour ${name}, Quel âge avez-vous ?`);
     } else{
