@@ -121,20 +121,88 @@ console.log(`Bonjour ` + PRENOM + `, tu as ` + age + ` ans.`);
 // // --------------------------
     // EXERCICE 6 : 
 // // --------------------------
-// Utilisez la méthode "slice" pour renvoyer le mot "banane".
-let txt = `I can eat bananas all day`;
+// document.write(`<h2> Exercice 6 </h2>`);
+// // Utilisez la méthode "slice" pour renvoyer le mot "banane".
+// let txt = `I can eat bananas all day`;
+// let txtBis = txt.slice(9, 17);
+// document.write(txtBis);
+// let txtTer = txt.slice(9, 16);
+// document.write(`<br>`, txtTer);
 
-// Alerter le nombre d'éléments dans un tableau en utilisant la bonne méthode.
-let cars = [`Volvo`, `Jeep`, `Mercedes`];
+// // Alerter sur le nombre d'éléments dans un tableau en utilisant la bonne méthode.
+// let cars = [`Volvo`, `Jeep`, `Mercedes`];
+// alert(`Il y a `+ cars.length + ` éléments dans le tableau`);
 
-// Utilisez la méthode "splice" pour supprimer "Orange" et "Apple" de 'fruits'.
-let fruits = [`Banane`, `Orange`, `Pomme`, `Kiwi`];
+// // Utilisez la méthode "splice" pour supprimer "Orange" et "Apple" de 'fruits'.
+// let fruits = [`Banane`, `Orange`, `Pomme`, `Kiwi`];
+// fruits.splice(1, 2);
+// document.write(`<br>`, fruits);
 
-// Choisissez l'opérateur conditionnel (ternaire) correct pour alerter "Trop jeune" si l'âge est inférieur à 18 ans, sinon alerter "Assez vieux".
+// // Choisissez l'opérateur conditionnel (ternaire) correct pour alerter "Trop jeune" si l'âge est inférieur à 18 ans, sinon alerter "Assez vieux".
+// let ageAdult = parseFloat(prompt(`Indiquez votre âge`));
+// let isAdult = (ageAdult >= 18) ? alert(`Assez vieux`) : alert(`Trop jeune`)
 
-// On reçoit un nombre, par exemple "let number = 42"; comment savoir de combien de dizaines (4) et de combien d'unités (2) est composé ce nombre ? (opérateur "modulo")
+// // On reçoit un nombre, par exemple "let number = 42"; comment savoir de combien de dizaines (4) et de combien d'unités (2) est composé ce nombre ? (opérateur "modulo")
+// // let number = 42
+// // let numberModulo1 = number % 19;
+// // let numberModulo2 = number % 10;
+// // document.write(`<br>`, `Il y a `, numberModulo1, ` dizaines et `, numberModulo2, ` unités dans 42`); // exemple 1
+// // document.write(`<br>`, `Il y a `, number % 19, ` dizaines et `, number % 10, ` unités dans 42`); // exemple 2
 
-// Utilisez la méthode "string" correcte pour remplacer le mot "Hello" par le mot "Welcome" // Cherchez sur internet // 
-let txt2 = `Hello World`;
+// // Correction // 
+// let number = parseFloat(prompt(`Entrez une valeur maximale de 2 chiffres`));
+// let unite = number % 10; // unités 
+// let dizaine = (number - unite) / 10;
+// // if (unite !== 0){
+// //     document.write(`<br>`, `Il y a `, dizaine, ` dizaines et `, unite, ` unités dans votre chiffre`);
+// // } 
+// document.write(`<br>`, `Il y a `, dizaine, ` dizaines et `, unite, ` unités dans votre chiffre`);
 
-// Utilisez des caractères d'échappement pour alerter (We are "Vikings").
+// // Utilisez la méthode "string" correcte pour remplacer le mot "Hello" par le mot "Welcome" // Cherchez sur internet // 
+// let txt2 = `Hello World`;
+// document.write(`<br>`, txt2.replace(`Hello`, `Welcome`));
+
+// // Utilisez des caractères d'échappement pour alerter (We are "Vikings").
+// // let answer = `We are "Vikings"`;
+// let answer = "We are \"Vikings\"";
+// alert(answer);
+
+// // --------------------------
+    // EXERCICE 7 : 
+// // --------------------------
+/* 
+    J'ai 1000€ sur mon compte
+    chaque mois j'ajoute 50€
+    combien de temps me faut-il pour avoir 2000€ sur mon compte ?
+*/
+
+// let i = 50;
+// while(i <= 1000){
+//     document.write(i + `Voici l'argent actuel `);
+//     i+=50
+// }
+
+// for(let i = 50; i <= 1000; i+=50){
+//     document.write(` Voici l'argent déposer chaque mois ${i} <br>`);
+// }
+// document.write(`<br> Il faut 20 mois pour avoir au total 2000€`);
+
+// Correction // 
+// Boucle "while" -
+// let soldeCompte = 1000;
+// let nbrMois = 0;
+
+// while(soldeCompte < 2000){
+//     soldeCompte += 50;
+//     nbrMois++;
+//     document.write(`<p> Ce mois, j'ai sur mon compte : </p> ${soldeCompte} €`);
+// }
+// document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrMois} mois`);
+
+// Boucle "for" -
+let nbrMoisBis = 0;
+for(let soldeCompteBis = 1000; soldeCompteBis <= 2000; soldeCompteBis += 50){
+    document.write(`<p> Ce mois, j'ai sur mon compte : </p> ${soldeCompteBis} €`);
+    nbrMoisBis++;
+}
+document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrMoisBis - 1} mois`);

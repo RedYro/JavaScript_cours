@@ -1,6 +1,7 @@
 // // --------------------------
     // 04 STRING
 // // --------------------------
+document.write(`<h1> STRING </h1>`);
 
 const PRENOM = `Grégory`;
 const NOM = `Lyfoung`;

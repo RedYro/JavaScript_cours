@@ -9,6 +9,8 @@ Commentaire d'un bloc de texte sur plusieurs lignes
 // // --------------------------
     // 01 VARIABLES 
 // // --------------------------
+document.write(`<h1> VARIABLES </h1>`);
+
 /* Les variables sont comme des boîtes
     Vous pouvez y stocker ce que vous souhaitez 
     On initialise une variable avec son nom (par choix)

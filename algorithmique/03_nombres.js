@@ -1,6 +1,7 @@
 // // --------------------------
     // 03 NOMBRES
 // // --------------------------
+document.write(`<h1> NOMBRES </h1>`);
 
 // Pour initialiser un nombre, il suffit de l'écrire sans (""), (''), (``)
 

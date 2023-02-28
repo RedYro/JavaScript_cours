@@ -1,6 +1,7 @@
 // // --------------------------
     // 02 DIFFÉRENTS TYPES DE VALEURS
 // // --------------------------
+document.write(`<h1> DIFFÉRENTS TYPES DE VALEURS </h1>`);
 
 /* 
 Il existe plusieurs types de valeurs, que l'on peut assigner à nos variables

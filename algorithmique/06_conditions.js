@@ -1,6 +1,7 @@
 // // --------------------------
     // 06 CONDITIONS
 // // --------------------------
+document.write(`<h1> CONDITIONS </h1>`);
 
 // -------------------------- Conditions et opérateurs de comparaison -------------------------- //
 
