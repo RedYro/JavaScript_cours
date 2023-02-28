@@ -172,6 +172,7 @@ alert(answer); */
 // // --------------------------
     // EXERCICE 7 : 
 // // --------------------------
+// document.write(`<h2> Exercice 7 </h2>`);
 /* 
     J'ai 1000€ sur mon compte
     chaque mois j'ajoute 50€
@@ -232,6 +233,7 @@ function nameAge(){
     }
     age = parseFloat(prompt(`Entrez votre âge`));
     if(age >= 1){
+        document.write(`<h2> Exercice 8 </h2>`);
         document.write(`<p> Bonjour ${name}, vous avez ${age} ans ! </p>`);
     } else{
         alert(`Veuillez vérifier les informations`);
