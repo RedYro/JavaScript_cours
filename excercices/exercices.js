@@ -229,7 +229,7 @@ function nameAge(){
         alert(`Bonjour ${name}, Quel âge avez-vous ?`);
     } else{
         alert(`Veuillez vérifier les informations`);
-        return document.write(`<p> Vérifiez votre prénom </p>`);
+        return document.write(`<h2> Exercice 8 </h2> <p> Vérifiez votre prénom </p>`);
     }
     let age = parseFloat(prompt(`Entrez votre âge`));
     if(age >= 1){
@@ -237,7 +237,7 @@ function nameAge(){
         document.write(`<p> Bonjour ${name}, vous avez ${age} ans ! </p>`);
     } else{
         alert(`Veuillez vérifier les informations`);
-        return document.write(`<p> Vérifiez votre âge </p>`);
+        return document.write(`<h2> Exercice 8 </h2> <p> Vérifiez votre âge </p>`);
     }
 }
 nameAge();
