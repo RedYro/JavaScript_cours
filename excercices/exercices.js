@@ -168,6 +168,7 @@ document.write(`<br>`, txt2.replace(`Hello`, `Welcome`)); */
 let answer = "We are \"Vikings\"";
 alert(answer); */
 
+
 // // --------------------------
     // EXERCICE 7 : 
 // // --------------------------
@@ -207,3 +208,34 @@ for(let soldeCompteBis = 1000; soldeCompteBis <= 2000; soldeCompteBis += 50){
     nbrMoisBis++;
 }
 document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrMoisBis - 1} mois`)*/
+
+
+// // --------------------------
+    // EXERCICE 8 : 
+// // --------------------------
+// Réaliser une fonction permettant à un internaute de :
+// - Saisir son Prénom dans un Prompt
+// - Retourner à l'Utilisateur : Bonjour [PRENOM], Quel age as-tu ?
+// - Saisir son âge
+// - Afficher ensuite un récapitulatif dans la page.
+// Bonjour [PRENOM], tu as [AGE] !
+// En cas d'échec une alert m'informera le problème.
+
+function nameAge(){
+    let name = prompt(`Entrez votre prénom`);
+    let lettersOnly =  /^[A-Za-zéèÉÈ]+$/;
+    if(name.match(lettersOnly)){
+        alert(`Bonjour ${name}, Quel âge avez-vous ?`);
+    } else{
+        alert(`Veuillez vérifier les informations`);
+        return document.write(`<p> Vérifiez votre prénom </p>`);
+    }
+    age = parseFloat(prompt(`Entrez votre âge`));
+    if(age >= 1){
+        document.write(`<p> Bonjour ${name}, vous avez ${age} ans ! </p>`);
+    } else{
+        alert(`Veuillez vérifier les informations`);
+        return document.write(`<p> Vérifiez votre âge </p>`);
+    }
+}
+nameAge();
