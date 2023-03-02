@@ -222,22 +222,38 @@ document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrM
 // Bonjour [PRENOM], tu as [AGE] !
 // En cas d'échec une alert m'informera le problème.
 
-function nameAge(){
-    let name = prompt(`Entrez votre prénom`);
-    let lettersOnly = /^[A-Za-zéèÉÈ]+$/; // /^[A-Za-zéèÉÈ]+$/ => lettres seulement avec caractères spéciaux "é", "É", "è", "È" inclus; nombres => exclus
-    if(name.match(lettersOnly)){
-        alert(`Bonjour ${name}, Quel âge avez-vous ?`);
-    } else{
-        alert(`Veuillez vérifier les informations`);
-        return document.write(`<h2> Exercice 8 </h2> <p> Vérifiez votre prénom </p>`);
-    }
-    let age = parseFloat(prompt(`Entrez votre âge`));
-    if(age >= 1){
-        document.write(`<h2> Exercice 8 </h2>`);
-        document.write(`<p> Bonjour ${name}, vous avez ${age} ans ! </p>`);
-    } else{
-        alert(`Veuillez vérifier les informations`);
-        return document.write(`<h2> Exercice 8 </h2> <p> Vérifiez votre âge </p>`);
+// function nameAge(){
+//     let name = prompt(`Entrez votre prénom`);
+//     let lettersOnly = /^[A-Za-zéèÉÈ]+$/; // /^[A-Za-zéèÉÈ]+$/ (regex) => lettres seulement avec caractères spéciaux "é", "É", "è", "È" inclus; nombres => exclus
+//     if(name.match(lettersOnly)){
+//         alert(`Bonjour ${name}, Quel âge avez-vous ?`);
+//     } else{
+//         alert(`Veuillez vérifier les informations`);
+//         return document.write(`<h2> Exercice 8 </h2> <p> Vérifiez votre prénom </p>`);
+//     }
+//     let age = parseFloat(prompt(`Entrez votre âge`));
+//     if(age >= 1){
+//         document.write(`<h2> Exercice 8 </h2>`);
+//         document.write(`<p> Bonjour ${name}, vous avez ${age} ans ! </p>`);
+//     } else{
+//         alert(`Veuillez vérifier les informations`);
+//         return document.write(`<h2> Exercice 8 </h2> <p> Vérifiez votre âge </p>`);
+//     }
+// }
+// nameAge();
+
+// Correction // 
+function hello() {
+    let prenom = prompt(`Saisissez votre prénom :`);
+    if (prenom !== ` ` && isNaN(prenom)) {
+        let age = prompt(`Bonjour ${prenom}; Quel est votre âge ?`)
+        if (age !== null && !isNaN(age)){
+            document.write(`Bonjour ${prenom} ! Vous avez ${age} ans !`)
+        } else{
+            alert(`Entrez votre âge !`)
+        }
+    } else {
+        alert(`Entrez votre prénom !`)
     }
 }
-nameAge();
+hello();

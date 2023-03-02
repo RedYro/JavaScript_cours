@@ -160,3 +160,45 @@ let result = myFunctionTer(6,5);
 docW1(result);
 
 document.write(`<hr>`);
+
+// -------------------------- Portée des variables-------------------------- //
+document.write(`<h3> Portée des variables </h3>`);
+// En JS, il existe deux espaces de portée différents : espace global et local
+    // -> espace global : désigne l'entièreté d'un script, à l'exception de ce qu'il y a à l'intérieur des fonctions
+    // -> espace local : désigne l'espace dans une fonction 
+
+    // ATTENTION // Éviter de déclarer plusieurs variables dans différents espaces en utilisant un même nom 
+
+docW3(`Exemples`)
+    // 2 variables globales 
+let x = 5;
+let y = 10;
+
+function portee1() {
+    document.write(`Depuis "portee1()", la valeur de 'x' est ${x} et la valeur de 'y' est ${y} `)
+}
+portee1();
+
+function portee2() {
+    // Ici nos variables portent le même nom que les variables globales définies à la ligne 173 et 174, bien qu'elles portent le même nom, dù à leur portée différentes, ce sont 4 entités distinctes. 'x' (ligne 173) != 'x' (ligne 183), 'y' (ligne 174) != 'y' (ligne 184)
+    let x = 20;
+    let y = 40;
+    document.write(`<br> Depuis "portee2()", la valeur de 'x' est ${x} et la valeur de 'y' est ${y} `)
+}
+portee2()
+
+document.write(`<br> Lorsque je me trouve en dehors d'une fonction (dans l'espace global), la valeur de 'x' est ${x} et la valeur de 'y' est ${y} `)
+
+function portee3() {
+    let a = 1;
+    let b = 2; 
+    document.write(`<br> Depuis "portee3()", la valeur de 'a' est ${a} et la valeur de 'b' est ${b} `)
+}
+portee3()
+
+// Test = erreur lors de l'exécution du code suivant : 
+// document.write(`<br> Depuis "portee3()", la valeur de 'a' est ${a} et la valeur de 'b' est ${b} `)
+
+// "a" ayant une portée locale, la variable n'est pas reconnue et le navigateur nous informe que cette variable n'a pas été définie 
+
+document.write(`<hr>`);
