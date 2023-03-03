@@ -1,0 +1,32 @@
+#red{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(206, 0, 0);
+    line-height: 150px;
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    margin: auto;
+}
+
+#orange{
+    width: 150px;
+    height: 150px;
+    background-color: orange;
+    line-height: 150px;
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    margin: auto;
+}
+
+#info{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(77, 181, 205);
+    line-height: 150px;
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    margin: auto;
+}
