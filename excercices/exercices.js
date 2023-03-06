@@ -243,17 +243,218 @@ document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrM
 // nameAge();
 
 // Correction // 
-function hello() {
-    let prenom = prompt(`Saisissez votre prénom :`);
-    if (prenom !== ` ` && isNaN(prenom)) {
-        let age = prompt(`Bonjour ${prenom}; Quel est votre âge ?`)
-        if (age !== null && !isNaN(age)){
-            document.write(`Bonjour ${prenom} ! Vous avez ${age} ans !`)
-        } else{
-            alert(`Entrez votre âge !`)
-        }
-    } else {
-        alert(`Entrez votre prénom !`)
+// function hello() {
+//     let prenom = prompt(`Saisissez votre prénom :`);
+//     if (prenom !== ` ` && isNaN(prenom)) {
+//         let age = prompt(`Bonjour ${prenom}; Quel est votre âge ?`)
+//         if (age !== null && !isNaN(age)){
+//             document.write(`Bonjour ${prenom} ! Vous avez ${age} ans !`)
+//         } else{
+//             alert(`Entrez votre âge !`)
+//         }
+//     } else {
+//         alert(`Entrez votre prénom !`)
+//     }
+// }
+// hello();
+
+
+// // --------------------------
+    // EXERCICE 10 : 
+// // --------------------------
+       
+        /*   
+         Ecrivez un programme qui fait saisir un nom de jour de la semaine à l'utilisateur, puis affiche le nom du jour suivant.
+         Les erreurs de saisie (jour incorrect) doivent être gérées.
+         Effectuez l'exercice avec des if/if else puis avec un switch.
+         */
+
+// Avec "switch" //
+// let day = prompt(`Saisissez un jour de de la semaine`);
+
+// switch (day) {
+//     case `Lundi`:
+//         alert(`Demain c'est mardi`)
+//         break;
+//     case `Mardi`:
+//         alert(`Demain c'est mercredi`)
+//         break;
+//     case `Mercredi`:
+//         alert(`Demain c'est jeudi`)
+//         break;
+//     case `Jeudi`:
+//         alert(`Demain c'est vendredi`)
+//         break;
+//     case `Vendredi`:
+//         alert(`Demain c'est samedi`)
+//         break;
+//     case `Samedi`:
+//         alert(`Demain c'est dimanche`)
+//         break;
+//     case `Dimanche`:
+//         alert(`Demain c'est lundi`)
+//         break;
+//     default:
+//         alert(`Le mot saisi, "${day}" ne correspond pas à un jour de la semaine.`)
+//         break;
+// }
+
+// Avec "function" // 
+
+// function weekDay() {
+//     let days = prompt(`Saisissez un jour de de la semaine`);
+//     if (days !== ` ` && isNaN(days)){
+
+//     }
+// }
+
+
+
+
+
+// // --------------------------
+    // EXERCICE 11 : 
+// // --------------------------
+
+       /*
+       Ecrivez un programme JS qui permet à l'utilisateur d'insérer le numéro du mois afin que le programme lui réponde le nombre de jours.
+       Ex : 
+            mois février => 28 jours (on considère que c'est toujours 28 ;) )
+            mois juin => 30 jours
+            mois octobre = > 31jours
+       */
+
+// function month() {
+//     let numberMonth = parseFloat(prompt(`Saisissez un chiffre correspondant à un mois`));
+//     if (numberMonth === 1 && numberMonth !== 0 && numberMonth < 13){
+//         return alert(`Il y a 31 jours dans le mois de janvier`);
+//     } else if (numberMonth === 2 && numberMonth !== 0 && numberMonth < 13){
+//         return alert(`Il y a 28 jours dans le mois de février`);
+//     } else if (numberMonth === 3 && numberMonth !== 0 && numberMonth < 13){
+//         return alert(`Il y a 31 jours dans le mois de mars`);
+//     } else if (numberMonth === 4 && numberMonth !== 0 && numberMonth < 13){
+//         return alert(`Il y a 30 jours dans le mois de avril`);
+//     } else if (numberMonth === 5 && numberMonth !== 0 && numberMonth < 13){
+//         return alert(`Il y a 31 jours dans le mois de mai`);
+//     } else if (numberMonth === 6 && numberMonth !== 0 && numberMonth < 13){
+//         return alert(`Il y a 30 jours dans le mois de juin`);
+//     } else if (numberMonth === 7 && numberMonth !== 0 && numberMonth < 13){
+//         return alert(`Il y a 31 jours dans le mois de juillet`);
+//     } else if (numberMonth === 8 && numberMonth !== 0 && numberMonth < 13){
+//         return alert(`Il y a 31 jours dans le mois d'août`);
+//     } else if (numberMonth === 9 && numberMonth !== 0 && numberMonth < 13){
+//         return alert(`Il y a 30 jours dans le mois de septembre`);
+//     } else if (numberMonth === 10 && numberMonth !== 0 && numberMonth < 13){
+//         return alert(`Il y a 31 jours dans le mois de octobre`);
+//     } else if (numberMonth === 11 && numberMonth !== 0 && numberMonth < 13){
+//         return alert(`Il y a 30 jours dans le mois de novembre`);
+//     } else if (numberMonth === 12 && numberMonth !== 0 && numberMonth < 13){
+//         return alert(`Il y a 31 jours dans le mois de décembre`);
+//     } else {
+//         alert(`Saisissez un chiffre entre 1 et 12`);
+//     }
+// }
+// month();
+
+
+// // --------------------------
+    // EXERCICE 12 : 
+// // --------------------------
+
+        /* 
+        À partir du tableau fourni, vous devez mettre en place un système d'authentification.
+        Après avoir demandé à votre utilisateur son EMAIL et MOT DE PASSE, et après avoir vérifié ses informations, vous lui souhaiterez la bienvenue avec son nom et son prénom (document.write);
+        En cas d'échec, vous afficherez une ALERT pour l'informer de l'erreur.
+        ar BaseDeDonnees = [
+                    {"prenom": "Tom","nom": "Lechat","email": "tom.lechat@gmail.com", "mdp": "poisson!"},
+                    {"prenom": "Jerry","nom": "Lasouris","email": "jerry.lasouris@gmail.com","mdp": "fromage!"},
+                    {"prenom": "twity","nom": "Lecanard","email": "twity.lecanard@gmail.com","mdp": "mignon!"}
+                ];
+        */
+
+// let BaseDeDonnees = [
+//     {"prenom": "Tom","nom": "Lechat","email": "tom.lechat@gmail.com", "mdp": "poisson!"},
+//     {"prenom": "Jerry","nom": "Lasouris","email": "jerry.lasouris@gmail.com","mdp": "fromage!"},
+//     {"prenom": "twity","nom": "Lecanard","email": "twity.lecanard@gmail.com","mdp": "mignon!"}
+// ];
+
+// function login() {
+//     let userMail = prompt(`Saisissez votre adresse mail`)
+//     if (userMail.match(BaseDeDonnees[0][`email`])){
+//         alert(`Entrez votre mot de passe`);
+//     } else if(userMail.match(BaseDeDonnees[1][`email`])) {
+//         alert(`Entrez votre mot de passe`);
+//     } else if(userMail.match(BaseDeDonnees[2][`email`])) {
+//         alert(`Entrez votre mot de passe`);
+//     }
+//     else {
+//         return alert(`Vos informations sont incorrectes`);
+//     }
+//     let password = prompt(`Votre mot de passe`);
+//     if(password.match(BaseDeDonnees[0][`mdp`])){
+//         alert(`Mot de passe correct`)
+//         return document.write(`<p> Bienvenue ${BaseDeDonnees[0][`prenom`]} ${BaseDeDonnees[0][`nom`]} ! </p>`)
+//     } else if(password.match(BaseDeDonnees[1][`mdp`])) {
+//         alert(`Mot de passe correct`)
+//         return document.write(`<p> Bienvenue ${BaseDeDonnees[1][`prenom`]} ${BaseDeDonnees[1][`nom`]} ! </p>`)
+//     } else if(password.match(BaseDeDonnees[2][`mdp`])) {
+//         alert(`Mot de passe correct`)
+//         return document.write(`<p> Bienvenue ${BaseDeDonnees[2][`prenom`]} ${BaseDeDonnees[2][`nom`]} ! </p>`)
+//     } 
+//     else {
+//        return alert(`Vos informations sont incorrectes`);
+//     }
+// }
+// login();
+
+
+// // --------------------------
+    // EXERCICE 13 : 
+// // --------------------------
+
+        /*
+        Ecrivez un programme  qui permet à l'utilisateur de deviner un nombre entier compris entre 0 et 100 générer automatiquement et aléatoirement en JS 
+        l'utilisateur a droit à 6 essais :
+             - en cas de réussite -> message affiche sur la page: Vous avez gagné, bravo ! La réponse était bien " le nombre"
+             - le nombre deviné est inférieur à celui qui est généré  -> Visez plus haut ! 
+             - le nombre deviné est supérieur à celui qui est généré -> Visez plus bas ! 
+             - n'oubliez pas de traiter les essais avec des erreurs (ex : l'utilisateur a choisi un nombre supérieur à 100 !!!)
+       */
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+function checkGuess() {
+    let userGuess = parseFloat(prompt(`Entrez un nombre`));
+    if (userGuess === randomNumber){
+        return document.write(`Bravo vous avez trouvé le numéro !`)
+    } else if(userGuess < randomNumber) {
+        alert(`Visez plus haut`)
     }
 }
-hello();
+
+
+// // --------------------------
+    // EXERCICE 14 : 
+// // --------------------------
+
+     /*
+        // Via Javascript :
+        // Écrivez le contenu de tous les éléments HTML de la page exercice.html et renseignez leurs attributs ;
+        // Remplacer la --> avec votre réponse 
+
+        // Première Section   
+                -->
+
+        // Seconde Section
+                -->
+
+        // Donnez à l'image une largeur de 600px ;
+                -->
+        
+        // Donnez aux sections : un padding et une couleur de fond ;
+                -->
+
+        // Créez une troisième section qui aura une classe et qui comprend : un titre 2, un paragraphe et un boutton ;
+                -->
+
+        // Ajoutez les flexbox à cette section : le contenu doit être centré verticalement et horizontalement.
+                -->
+       */
