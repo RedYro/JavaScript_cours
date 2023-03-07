@@ -270,28 +270,28 @@ document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrM
          */
 
 // Avec "switch" //
-// let day = prompt(`Saisissez un jour de de la semaine`);
+// let day = prompt(`Saisissez un jour de de la semaine`).toLowerCase();
 
 // switch (day) {
-//     case `Lundi`:
+//     case `lundi`:
 //         alert(`Demain c'est mardi`)
 //         break;
-//     case `Mardi`:
+//     case `mardi`:
 //         alert(`Demain c'est mercredi`)
 //         break;
-//     case `Mercredi`:
+//     case `mercredi`:
 //         alert(`Demain c'est jeudi`)
 //         break;
-//     case `Jeudi`:
+//     case `jeudi`:
 //         alert(`Demain c'est vendredi`)
 //         break;
-//     case `Vendredi`:
+//     case `vendredi`:
 //         alert(`Demain c'est samedi`)
 //         break;
-//     case `Samedi`:
+//     case `samedi`:
 //         alert(`Demain c'est dimanche`)
 //         break;
-//     case `Dimanche`:
+//     case `dimanche`:
 //         alert(`Demain c'est lundi`)
 //         break;
 //     default:
@@ -299,17 +299,55 @@ document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrM
 //         break;
 // }
 
-// Avec "function" // 
+// Correction //
+// 'switch' //
+// let day = prompt(`Saisissez un jour de de la semaine`).toLowerCase();
 
-// function weekDay() {
-//     let days = prompt(`Saisissez un jour de de la semaine`);
-//     if (days !== ` ` && isNaN(days)){
-
-//     }
+// switch (day) {
+//     case `lundi`:
+//         document.querySelector(`#p1`).innerHTML = (`Nous sommes ${day}, demain c'est mardi !`)
+//         break;
+//     case `mardi`:
+//         document.querySelector(`#p1`).innerHTML = (`Nous sommes ${day}, demain c'est mercredi !`)
+//         break;
+//     case `mercredi`:
+//         document.querySelector(`#p1`).innerHTML = (`Nous sommes ${day}, demain c'est jeudi !`)
+//         break;
+//     case `jeudi`:
+//         document.querySelector(`#p1`).innerHTML = (`Nous sommes ${day}, demain c'est vendredi !`)
+//         break;
+//     case `vendredi`:
+//         document.querySelector(`#p1`).innerHTML = (`Nous sommes ${day}, demain c'est samedi !`)
+//         break;
+//     case `samedi`:
+//         document.querySelector(`#p1`).innerHTML = (`Nous sommes ${day}, demain c'est dimanche !`)
+//         break;
+//     case `dimanche`:
+//         document.querySelector(`#p1`).innerHTML = (`Nous sommes ${day}, demain c'est lundi !`)
+//         break;
+//     default:
+//         document.querySelector(`#p1`).innerHTML = (`Le mot saisi, "${day}" ne correspond pas à un jour de la semaine.`)
+//         break;
 // }
 
+// 'array' with 'for' //
+// let day = prompt(`Saisissez un jour de de la semaine`).toLowerCase();
+// let weekDays = [`lundi`,`mardi`,`mercredi`,`jeudi`,`vendredi`,`samedi`,`dimanche`];
 
-
+// for(let i = 0 ; i < weekDays.length ; i++){
+//     i = weekDays.indexOf(day);
+//     if(weekDays.includes(day)){
+//         if(i === 6){
+//             document.querySelector(`#p1`).innerHTML = (`Nous sommes ${day}, demain c'est ${weekDays[i = 0-1]} !`);
+//         } else{
+//             document.querySelector(`#p1`).innerHTML = (`Nous sommes ${day}, demain c'est ${weekDays[i+1]} !`);
+//         }
+//         document.querySelector(`#p1`).innerHTML = (`Nous sommes ${day}, demain c'est ${weekDays[i+1]} !`);
+//     } else {
+//         document.querySelector(`#p1`).innerHTML = (`Le mot saisi, "${day}" ne correspond pas à un jour de la semaine.`)
+//    }
+//    break;
+// }
 
 
 // // --------------------------
@@ -356,6 +394,96 @@ document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrM
 // }
 // month();
 
+// let month = parseFloat(prompt(`Saisissez un nombre entre 1 et 12 correspondant aux mois de l'année`)) ;
+
+// switch (month) {
+//     case 1:
+//         document.querySelector(`#p2`).innerHTML = (`Il y a 31 jours dans le mois de janvier.`)
+//         break;
+//     case 2:
+//         document.querySelector(`#p2`).innerHTML = (`Il y a 28 jours dans le mois de février.`)
+//         break;
+//     case 3:
+//         document.querySelector(`#p2`).innerHTML = (`Il y a 31 jours dans le mois de mars.`)
+//         break;
+//     case 4:
+//         document.querySelector(`#p2`).innerHTML = (`Il y a 30 jours dans le mois de avril.`)
+//         break;
+//     case 5:
+//         document.querySelector(`#p2`).innerHTML = (`Il y a 31 jours dans le mois de mai.`)
+//         break;
+//     case 6:
+//         document.querySelector(`#p2`).innerHTML = (`Il y a 30 jours dans le mois de juin.`)
+//         break;
+//     case 7:
+//         document.querySelector(`#p2`).innerHTML = (`Il y a 31 jours dans le mois de juillet.`)
+//         break;
+//     case 8:
+//         document.querySelector(`#p2`).innerHTML = (`Il y a 31 jours dans le mois d'août.`)
+//         break;
+//     case 9:
+//         document.querySelector(`#p2`).innerHTML = (`Il y a 30 jours dans le mois de septembre.`)
+//         break;
+//     case 10:
+//         document.querySelector(`#p2`).innerHTML = (`Il y a 31 jours dans le mois de octobre.`)
+//         break;
+//     case 11:
+//         document.querySelector(`#p2`).innerHTML = (`Il y a 30 jours dans le mois de novembre.`)
+//         break;
+//     case 12:
+//         document.querySelector(`#p2`).innerHTML = (`Il y a 31 jours dans le mois de décembre.`)
+//         break;
+//     default:
+//         document.querySelector(`#p2`).innerHTML = (`Le nombre saisi, "${month}" ne correspond pas à un mois de l'année.`)
+//         break;
+// }
+
+// let month = parseFloat(prompt(`Saisissez un chiffre correspondant au mois de l'année`));
+// let monthYear = [`janvier`,`février`,`mars`,`avril`,`mai`,`juin`,`juillet`,`août`,`septembre`,`octobre`,`novembre`,`décembre`];
+// let monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+// for(let i = 0 ; i < monthYear.length ; i++){
+//     i = monthYear.indexOf(month) ;
+//     if(monthYear.includes(month)){
+//         document.querySelector(`#p1`).innerHTML = (`Dans le mois de ${month}, `);
+//     } else {
+//         document.querySelector(`#p1`).innerHTML = (`Le nombre saisi, "${month}" ne correspond pas à un mois de l'année.`)
+//    }
+//    for (let i = 0; i < monthDays.length; i++) {
+//     i = monthDays.indexOf(month)
+//     if (monthDays.includes(month)) {
+//         document.querySelector(`#p1`).innerHTML = (`il y a ${monthDays[i+1]} jours !`);
+//     }
+//    }
+//    break;
+// }
+
+// Correction //
+// 'array' with 'for' //
+// const TAB1 =[4,6,9,11];
+// const TAB2 = [1,3,5,7,8,10,12];
+// const FEV = 2
+
+//      if (isNaN(mois)) { // si la personne ne rentre pas un nombre
+//           document.getElementById('p2').innerHTML = 'Vous n\'avez pas mis un chiffre';
+//      } else {// ici c'est forcément un nombre
+
+//           for(let i=0; i<= moisNom.length; i++){
+//                               //4
+//                if(TAB1.includes(mois)){
+//                     document.getElementById('p2').innerText = `Le mois n° ${mois}, ${moisNom[mois]}, fait 30 jours.`;
+//                }else if(TAB2.includes(mois)){
+//                     document.getElementById('p2').innerText = `Le mois n° ${mois}, ${moisNom[mois]}, fait 31 jours.`;
+//                }else if( mois === 2){
+//                     document.getElementById('p2').innerText = `Le mois n° ${mois}, ${moisNom[mois]}, fait 28 jours.`;
+//                }else{
+//                     document.getElementById('p2').innerText = `vous devez saisir un nombre entre 1 et 12 `;
+
+//                }
+
+//           }
+             
+//      }
 
 // // --------------------------
     // EXERCICE 12 : 
@@ -372,11 +500,11 @@ document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrM
                 ];
         */
 
-// let BaseDeDonnees = [
-//     {"prenom": "Tom","nom": "Lechat","email": "tom.lechat@gmail.com", "mdp": "poisson!"},
-//     {"prenom": "Jerry","nom": "Lasouris","email": "jerry.lasouris@gmail.com","mdp": "fromage!"},
-//     {"prenom": "twity","nom": "Lecanard","email": "twity.lecanard@gmail.com","mdp": "mignon!"}
-// ];
+let BaseDeDonnees = [
+    {"prenom": "Tom","nom": "Lechat","email": "tom.lechat@gmail.com", "mdp": "poisson!"},
+    {"prenom": "Jerry","nom": "Lasouris","email": "jerry.lasouris@gmail.com","mdp": "fromage!"},
+    {"prenom": "twity","nom": "Lecanard","email": "twity.lecanard@gmail.com","mdp": "mignon!"}
+];
 
 // function login() {
 //     let userMail = prompt(`Saisissez votre adresse mail`)
@@ -407,6 +535,61 @@ document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrM
 // }
 // login();
 
+// Correction // 
+// "for" //
+// let email = prompt(`Veuillez saisir votre mail`);
+// let mdp = prompt(`Veuillez saisir votre mot de passe`);
+
+// for(let i = 0; i < BaseDeDonnees.length; i++){
+//     if(email === (BaseDeDonnees[i][`email`]) && mdp === (BaseDeDonnees[i][`mdp`])){
+//         document.write(`Bonjour ${BaseDeDonnees[i][`prenom`]} ${BaseDeDonnees[i][`nom`]} !`);
+//         break;
+//     } else {
+//         document.write(`Vos informations sont incorrectes`);
+//     }
+//     break;
+// }
+
+
+// function loginBis() {
+//     let userMail = prompt(`Saisissez votre adresse mail`)
+//     for(i = 0; i < BaseDeDonnees.length; i++){
+//         i = BaseDeDonnees.includes(userMail);
+//         if(userMail.match(BaseDeDonnees[i+1][`email`])){
+//             alert(`Entrez votre mot de passe`);
+//         } else {
+//             return alert(`Vos informations sont incorrectes`);
+//         }
+//     }
+// }
+
+// function login() {
+//         let userMail = prompt(`Saisissez votre adresse mail`)
+//         if (userMail.match(BaseDeDonnees[0][`email`])){
+//             alert(`Entrez votre mot de passe`);
+//         } else if(userMail.match(BaseDeDonnees[1][`email`])) {
+//             alert(`Entrez votre mot de passe`);
+//         } else if(userMail.match(BaseDeDonnees[2][`email`])) {
+//             alert(`Entrez votre mot de passe`);
+//         }
+//         else {
+//             return alert(`Vos informations sont incorrectes`);
+//         }
+//         let password = prompt(`Votre mot de passe`);
+//         if(password.match(BaseDeDonnees[0][`mdp`])){
+//             alert(`Mot de passe correct`)
+//             return document.write(`<p> Bienvenue ${BaseDeDonnees[0][`prenom`]} ${BaseDeDonnees[0][`nom`]} ! </p>`)
+//         } else if(password.match(BaseDeDonnees[1][`mdp`])) {
+//             alert(`Mot de passe correct`)
+//             return document.write(`<p> Bienvenue ${BaseDeDonnees[1][`prenom`]} ${BaseDeDonnees[1][`nom`]} ! </p>`)
+//         } else if(password.match(BaseDeDonnees[2][`mdp`])) {
+//             alert(`Mot de passe correct`)
+//             return document.write(`<p> Bienvenue ${BaseDeDonnees[2][`prenom`]} ${BaseDeDonnees[2][`nom`]} ! </p>`)
+//         } 
+//         else {
+//            return alert(`Vos informations sont incorrectes`);
+//         }
+//     }
 
 // // --------------------------
     // EXERCICE 13 : 
@@ -458,7 +641,10 @@ document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrM
 //         } if (userGuess > 100) {
 //             alert(`Le nombre saisi est supérieur à 100 !`);
 //             lowOrHi.textContent = `Le nombre saisi est supérieur à 100 ! Veuillez saisir un nombre en 1 et 100.`
-//         }
+//         } else if (userGuess === 0) {
+//             // alert(`Votre saisie n'est pas nombre ou doit être supérieur à 0`);
+//             lowOrHi.textContent = `Votre saisie n'est pas nombre ou doit être supérieur à 0 ! Veuillez saisir un nombre en 1 et 100.`
+//         } 
 //     }
 //     guessCount++;
 //     guessField.value = ``;
@@ -486,7 +672,7 @@ document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrM
 //     guessSubmit.disabled = false;
 //     guessField.value = ``;
 //     guessField.focus();
-//     lastResult.style.backgroundColor = 'white';
+//     lastResult.style.backgroundColor = '#393939';
 //     randomNumber = Math.floor(Math.random() * 100) + 1;
 // }
 
@@ -517,12 +703,12 @@ document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrM
         // Ajoutez les flexbox à cette section : le contenu doit être centré verticalement et horizontalement.
                 -->
        */
-let section1 = document.getElementById(`first-section`);
+let section1 = document.querySelector(`#first-section`);
 let h1 = document.querySelector(`h1`);
 let p = document.querySelector(`p`);
 let img = document.querySelector(`img`);
 let btn = document.querySelector(`button`);
-let section2 = document.getElementById(`second-section`);
+let section2 = document.querySelector(`#second-section`);
 let h2 = document.querySelector(`h2`);
 let a = document.querySelector(`a`);
 
@@ -558,12 +744,12 @@ console.log(a8)
 // a => 'href'
 
 
-// Donnez à l'image une largeur de 600px ; //
+// // Donnez à l'image une largeur de 600px ; //
 img.style.width = `600px`;
 
-// Donnez aux sections : un padding et une couleur de fond ; //
+// // Donnez aux sections : un padding et une couleur de fond ; //
 
-// Section 1 style //
+// // Section 1 style //
 section1.style.backgroundColor = `black`;
 section1.style.color = `white`;
 section1.style.padding = `30px`;
@@ -574,20 +760,20 @@ section1.style.alignItems = `center`;
 section1.style.textAlign = `center`;
 section1.style.borderRadius = `20px`;
 
-// button style //
+// // button style //
 btn.style.backgroundColor = `gray`;
 btn.style.color = `white`;
 btn.style.cursor = `pointer`;
 btn.style.borderRadius = `5px`;
 btn.style.padding = `8px`;
 
-// Image style //
+// // Image style //
 img.style.margin = `25px`;
 img.style.background = `rgb(200,4,4)`;
 img.style.background = `linear-gradient(90deg, rgba(200,4,4,1) 0%, rgba(0,0,0,1) 45%, rgba(0,14,255,1) 100%)`;
 img.style.borderRadius = `20px`;
 
-// Section 2 style //
+// // Section 2 style //
 section2.style.background = `rgb(200,4,4)`;
 section2.style.background = `linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(200,4,4,1) 5%, rgba(0,0,0,1) 50%, rgba(200,4,4,1) 95%, rgba(0,0,0,1) 100%)`;
 section2.style.color = `white`;
@@ -599,12 +785,12 @@ section2.style.textAlign = `center`;
 section2.style.padding = `30px`;
 section2.style.borderRadius = `20px`;
 
-// a "lien" style //
+// // a "lien" style //
 a.style.color = `gray`;
 a.style.textDecoration = `none`;
 a.style.margin = `15px`;
 
-// Création d'une 3ème section avec un titre ('h2'), un paragraphe ('p') et un bouton ('button') //
+// // Création d'une 3ème section avec un titre ('h2'), un paragraphe ('p') et un bouton ('button') //
 let body = document.querySelector(`body`)
 let section3 = document.createElement(`section`);
 section3.setAttribute(`class`, `third-section`);
@@ -619,7 +805,7 @@ paragapah4.innerHTML = `Paragraphe 4`;
 section3.appendChild(button2);
 button2.innerHTML = `Je suis un nouveau bouton !`
 
-// Section 3 style //
+// // Section 3 style //
 section3.style.display = `flex`;
 section3.style.flexDirection = `column`;
 section3.style.justifyContent = `center`;
@@ -631,10 +817,10 @@ section3.style.color = `white`;
 section3.style.padding = `30px`;
 section3.style.borderRadius = `20px`;
 
-// body style //
+// // body style //
 body.style.backgroundColor = `#393939`
 
-// button bis //
+// // button bis //
 button2.style.backgroundColor = `gray`;
 button2.style.color = `white`;
 button2.style.cursor = `pointer`;
