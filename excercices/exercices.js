@@ -413,23 +413,82 @@ document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrM
 // // --------------------------
 
         /*
-        Ecrivez un programme  qui permet à l'utilisateur de deviner un nombre entier compris entre 0 et 100 générer automatiquement et aléatoirement en JS 
-        l'utilisateur a droit à 6 essais :
-             - en cas de réussite -> message affiche sur la page: Vous avez gagné, bravo ! La réponse était bien " le nombre"
+        Ecrivez un programme qui permet à l'utilisateur de deviner un nombre entier compris entre 0 et 100 générer automatiquement et aléatoirement en JS 
+        l'utilisateur a le droit à 6 essais :
+             - en cas de réussite -> message affiche sur la page: Vous avez gagné, bravo ! La réponse était bien "le nombre"
              - le nombre deviné est inférieur à celui qui est généré  -> Visez plus haut ! 
              - le nombre deviné est supérieur à celui qui est généré -> Visez plus bas ! 
              - n'oubliez pas de traiter les essais avec des erreurs (ex : l'utilisateur a choisi un nombre supérieur à 100 !!!)
        */
-let randomNumber = Math.floor(Math.random() * 100) + 1;
-function checkGuess() {
-    let userGuess = parseFloat(prompt(`Entrez un nombre`));
-    if (userGuess === randomNumber){
-        return document.write(`Bravo vous avez trouvé le numéro !`)
-    } else if(userGuess < randomNumber) {
-        alert(`Visez plus haut`)
-    }
-}
 
+// --- Jeu fait grâce à MDN --- //
+// let randomNumber = Math.floor(Math.random() * 100) + 1;
+// let guesses = document.querySelector(`.guesses`);
+// let lastResult = document.querySelector(`.lastResult`);
+// let lowOrHi = document.querySelector(`.lowOrHi`);
+// let guessSubmit = document.querySelector(`.guessSubmit`);
+// let guessField = document.querySelector(`.guessField`);
+// let guessCount = 1;
+// let resetButton;
+
+// function checkGuess() {
+//     let userGuess = Number(guessField.value);
+//     if (guessCount === 1) {
+//         guesses.textContent = `Propositions précédentes : `;
+//     }
+//     guesses.textContent += userGuess + ` `;
+//     if (userGuess === randomNumber) {
+//         lastResult.textContent = `Bravo ! Vous avez trouvé le nombre exact qui était ${randomNumber}.`;
+//         lastResult.style.backgroundColor = `green`;
+//         lastResult.style.width = `50%`;
+//         lowOrHi.textContent = ``;
+//         setGameOver();
+//     } else if (guessCount === 6) {
+//         lastResult.textContent = `Vous avez perdu(e) ! Le nombre exact était ${randomNumber}.`
+//         lastResult.style.width = `50%`;
+//         setGameOver();
+//     } else {
+//         lastResult.textContent = `Mauvaise réponse !`
+//         lastResult.style.backgroundColor = `red`;
+//         lastResult.style.borderRadius = `15px`;
+//         if (userGuess < randomNumber) {
+//             lowOrHi.textContent = `Le nombre saisi est trop bas. Visez plus haut !`
+//         } else if (userGuess > randomNumber) {
+//             lowOrHi.textContent = `Le nombre saisi est trop élevé. Visez plus bas !`
+//         } if (userGuess > 100) {
+//             alert(`Le nombre saisi est supérieur à 100 !`);
+//             lowOrHi.textContent = `Le nombre saisi est supérieur à 100 ! Veuillez saisir un nombre en 1 et 100.`
+//         }
+//     }
+//     guessCount++;
+//     guessField.value = ``;
+//     guessField.focus();
+// }
+// guessSubmit.addEventListener(`click`, checkGuess);
+
+// function setGameOver() {
+//     guessField.disabled = true;
+//     guessSubmit.disabled = true;
+//     resetButton = document.createElement(`button`);
+//     resetButton.textContent = `Commencer une nouvelle partie`;
+//     document.body.appendChild(resetButton);
+//     resetButton.addEventListener(`click`, resetGame);
+// }
+
+// function resetGame() {
+//     guessCount = 1;
+//     let resetParas = document.querySelectorAll(`.resultParas p`);
+//     for (let i = 0 ; i < resetParas.length ; i++) {
+//         resetParas[i].textContent = ``;
+//     }
+//     resetButton.parentNode.removeChild(resetButton);
+//     guessField.disabled = false;
+//     guessSubmit.disabled = false;
+//     guessField.value = ``;
+//     guessField.focus();
+//     lastResult.style.backgroundColor = 'white';
+//     randomNumber = Math.floor(Math.random() * 100) + 1;
+// }
 
 // // --------------------------
     // EXERCICE 14 : 
@@ -458,3 +517,127 @@ function checkGuess() {
         // Ajoutez les flexbox à cette section : le contenu doit être centré verticalement et horizontalement.
                 -->
        */
+let section1 = document.getElementById(`first-section`);
+let h1 = document.querySelector(`h1`);
+let p = document.querySelector(`p`);
+let img = document.querySelector(`img`);
+let btn = document.querySelector(`button`);
+let section2 = document.getElementById(`second-section`);
+let h2 = document.querySelector(`h2`);
+let a = document.querySelector(`a`);
+
+let a1 = section1.getAttributeNames()
+let a2 = h1.getAttributeNames(`h1`)
+let a3 = p.getAttributeNames(`p`)
+let a4 = img.getAttributeNames(`img`)
+let a5 = btn.getAttributeNames(`button`)
+let a6 = section2.getAttributeNames()
+let a7 = h2.getAttributeNames(`h2`)
+let a8 = a.getAttributeNames(`a`)
+
+console.log(a1)
+console.log(a2)
+console.log(a3)
+console.log(a4)
+console.log(a5)
+console.log(a6)
+console.log(a7)
+console.log(a8)
+
+// Première Section   
+// section => 'id'
+// h1 => 'null' (aucun attribut)
+// p => 'null' (aucun attribut)
+// img => 'src' ; 'alt'
+// button => 'null' (aucun attribut)
+
+// Seconde Section
+// section => 'id'
+// h2 => 'null' (aucun attribut)
+// p => 'null' (aucun attribut)
+// a => 'href'
+
+
+// Donnez à l'image une largeur de 600px ; //
+img.style.width = `600px`;
+
+// Donnez aux sections : un padding et une couleur de fond ; //
+
+// Section 1 style //
+section1.style.backgroundColor = `black`;
+section1.style.color = `white`;
+section1.style.padding = `30px`;
+section1.style.display = `flex`;
+section1.style.flexDirection = `column`;
+section1.style.justifyContent = `center`;
+section1.style.alignItems = `center`;
+section1.style.textAlign = `center`;
+section1.style.borderRadius = `20px`;
+
+// button style //
+btn.style.backgroundColor = `gray`;
+btn.style.color = `white`;
+btn.style.cursor = `pointer`;
+btn.style.borderRadius = `5px`;
+btn.style.padding = `8px`;
+
+// Image style //
+img.style.margin = `25px`;
+img.style.background = `rgb(200,4,4)`;
+img.style.background = `linear-gradient(90deg, rgba(200,4,4,1) 0%, rgba(0,0,0,1) 45%, rgba(0,14,255,1) 100%)`;
+img.style.borderRadius = `20px`;
+
+// Section 2 style //
+section2.style.background = `rgb(200,4,4)`;
+section2.style.background = `linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(200,4,4,1) 5%, rgba(0,0,0,1) 50%, rgba(200,4,4,1) 95%, rgba(0,0,0,1) 100%)`;
+section2.style.color = `white`;
+section2.style.padding = `20px`;
+section2.style.display = `flex`;
+section2.style.flexDirection = `column`;
+section2.style.justifyContent = `center`;
+section2.style.textAlign = `center`;
+section2.style.padding = `30px`;
+section2.style.borderRadius = `20px`;
+
+// a "lien" style //
+a.style.color = `gray`;
+a.style.textDecoration = `none`;
+a.style.margin = `15px`;
+
+// Création d'une 3ème section avec un titre ('h2'), un paragraphe ('p') et un bouton ('button') //
+let body = document.querySelector(`body`)
+let section3 = document.createElement(`section`);
+section3.setAttribute(`class`, `third-section`);
+body.appendChild(section3);
+let titleH2 = document.createElement(`h2`);
+let paragapah4 = document.createElement(`p`);
+let button2 = document.createElement(`button`);
+section3.appendChild(titleH2);
+titleH2.innerHTML = `Sous titre bis`;
+section3.appendChild(paragapah4);
+paragapah4.innerHTML = `Paragraphe 4`;
+section3.appendChild(button2);
+button2.innerHTML = `Je suis un nouveau bouton !`
+
+// Section 3 style //
+section3.style.display = `flex`;
+section3.style.flexDirection = `column`;
+section3.style.justifyContent = `center`;
+section3.style.alignItems = `center`;
+section3.style.textAlign = `center`;
+section3.style.background = `rgba(0,14,255)`;
+section3.style.background = `linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,14,255,1) 5%, rgba(0,0,0,1) 50%, rgba(0,14,255,1), rgba(0,0,0,1) 100%)`;
+section3.style.color = `white`;
+section3.style.padding = `30px`;
+section3.style.borderRadius = `20px`;
+
+// body style //
+body.style.backgroundColor = `#393939`
+
+// button bis //
+button2.style.backgroundColor = `gray`;
+button2.style.color = `white`;
+button2.style.cursor = `pointer`;
+button2.style.borderRadius = `5px`;
+button2.style.padding = `8px`;
+button2.style.margin = `10px`;
