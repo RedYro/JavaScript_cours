@@ -500,11 +500,11 @@ document.write(`<p> Pour atteindre la somme de 2000€, il me faut : </p> ${nbrM
                 ];
         */
 
-let BaseDeDonnees = [
-    {"prenom": "Tom","nom": "Lechat","email": "tom.lechat@gmail.com", "mdp": "poisson!"},
-    {"prenom": "Jerry","nom": "Lasouris","email": "jerry.lasouris@gmail.com","mdp": "fromage!"},
-    {"prenom": "twity","nom": "Lecanard","email": "twity.lecanard@gmail.com","mdp": "mignon!"}
-];
+// let BaseDeDonnees = [
+//     {"prenom": "Tom","nom": "Lechat","email": "tom.lechat@gmail.com", "mdp": "poisson!"},
+//     {"prenom": "Jerry","nom": "Lasouris","email": "jerry.lasouris@gmail.com","mdp": "fromage!"},
+//     {"prenom": "twity","nom": "Lecanard","email": "twity.lecanard@gmail.com","mdp": "mignon!"}
+// ];
 
 // function login() {
 //     let userMail = prompt(`Saisissez votre adresse mail`)
@@ -676,6 +676,66 @@ let BaseDeDonnees = [
 //     randomNumber = Math.floor(Math.random() * 100) + 1;
 // }
 
+// Correction //
+
+// function devinette(){
+//     let nombreArrondi = parseInt(Math.random()*100);
+//         //  console.log(nombreArrondi);
+//          let essai = 0;
+//             for(let i = 1 ; i <= 6 ; i++){ //2
+//                 let choixUser = parseInt(prompt('Trouvez quel est le nombre mystère, compris e,tre 0 et 100, Attention vous avez 6 essais !'));
+//                     if(choixUser === nombreArrondi){
+//                         document.write("Vous avez gagné, bravo la réponse était bien  <strong> " + nombreArrondi+ '</strong>.' );
+//                         break
+//                     }else {
+//                             if(choixUser < 0 || choixUser > 100 || isNaN(choixUser)){
+//                                 alert('Vous devez saisir un nombre compris entre 0 et 100 !' + i  +'/6');
+//                                 i--; // ici on décrémente i car l'uilisateur n'a pas rentré une valeur compris entre 0 et 100 -> ça ne compte pas dans les essais ( si je suis sur le 3 ème essai je ne perds ma position )
+//                                 essai = 0;
+//                                 // console.log(essai);     
+//                            }else if(choixUser > nombreArrondi){
+//                                    alert('Visez plus bas ! '  + i  +'/6 ');
+//                                    essai = 0;
+//                                 //    console.log(essai);        
+//                            }else{
+//                                    alert('Visez plus haut ! '  + i  +'/6 ');
+//                                    essai = 0;
+//                                    console.log(essai);    
+//                            }
+//                            essai++
+//                     }                   
+//             }// Fin de la boucle
+//             if(essai === 1){
+//                 document.write("Dommage, vous n\'avez pas trouvé la bonne réponse, c\'était <strong>" + nombreArrondi+ '</strong>.' );     
+
+//             }
+
+//   }
+         
+// devinette()
+
+
+// let nombreArrondi = parseInt(Math.random()*100);
+// for(let i = 1; i <= 6; i++){
+// let choixUser = parseInt(prompt('Trouvez quel est le nombre mystère, compris entre 0 et 100. Attention, vous avez 6 essais !'));
+// if(choixUser === nombreArrondi){
+//     document.getElementById('p4').innerHTML = 'Vous avez gagné, bravo ! La réponse était bien ' + nombreArrondi + '.';
+//     break; // on casse la boucle pour qu'elle ne fasse pas les 6 tours demandés
+// }else if(choixUser < 0 || choixUser > 100){
+//     alert('Vous devez saisir un nombre compris entre 0 et 100 ! ' + i +  '/6');
+//     i--; // on décrémente i car l'utilisateur n'a pas rentré une valeur comprise entre 0 et 100 // ça ne compte pas dans les essais
+// }else if(isNaN(choixUser)){ // isNaN = is Not a Number : on vérifie si dans le prompt la personne a mis quelque chose qui n'est pas un nombre
+//     alert('Vous devez saisir un nombre compris entre 0 et 100 ! ' + i +  '/6');
+//     i--; // ça ne compte pas dans les essais 
+// }else if(choixUser > nombreArrondi){
+//     alert('Visez plus bas ! ' + i + '/6');
+// }else {
+//     alert('Visez plus haut ! ' + i + '/6');
+// }
+// document.getElementById('p3').innerHTML ='Dommage, vous n\'avez pas toruvé la bonne réponse, c\'était ' + nombreArrondi + '.';
+// }
+
+
 // // --------------------------
     // EXERCICE 14 : 
 // // --------------------------
@@ -703,51 +763,156 @@ let BaseDeDonnees = [
         // Ajoutez les flexbox à cette section : le contenu doit être centré verticalement et horizontalement.
                 -->
        */
-let section1 = document.querySelector(`#first-section`);
-let h1 = document.querySelector(`h1`);
-let p = document.querySelector(`p`);
-let img = document.querySelector(`img`);
-let btn = document.querySelector(`button`);
-let section2 = document.querySelector(`#second-section`);
-let h2 = document.querySelector(`h2`);
-let a = document.querySelector(`a`);
+// let section1 = document.querySelector(`#first-section`);
+// let h1 = document.querySelector(`h1`);
+// let p = document.querySelector(`p`);
+// let img = document.querySelector(`img`);
+// let btn = document.querySelector(`button`);
+// let section2 = document.querySelector(`#second-section`);
+// let h2 = document.querySelector(`h2`);
+// let a = document.querySelector(`a`);
 
-let a1 = section1.getAttributeNames()
-let a2 = h1.getAttributeNames(`h1`)
-let a3 = p.getAttributeNames(`p`)
-let a4 = img.getAttributeNames(`img`)
-let a5 = btn.getAttributeNames(`button`)
-let a6 = section2.getAttributeNames()
-let a7 = h2.getAttributeNames(`h2`)
-let a8 = a.getAttributeNames(`a`)
+// let a1 = section1.getAttributeNames()
+// let a2 = h1.getAttributeNames(`h1`)
+// let a3 = p.getAttributeNames(`p`)
+// let a4 = img.getAttributeNames(`img`)
+// let a5 = btn.getAttributeNames(`button`)
+// let a6 = section2.getAttributeNames()
+// let a7 = h2.getAttributeNames(`h2`)
+// let a8 = a.getAttributeNames(`a`)
 
-console.log(a1)
-console.log(a2)
-console.log(a3)
-console.log(a4)
-console.log(a5)
-console.log(a6)
-console.log(a7)
-console.log(a8)
+// console.log(a1)
+// console.log(a2)
+// console.log(a3)
+// console.log(a4)
+// console.log(a5)
+// console.log(a6)
+// console.log(a7)
+// console.log(a8)
 
-// Première Section   
-// section => 'id'
-// h1 => 'null' (aucun attribut)
-// p => 'null' (aucun attribut)
-// img => 'src' ; 'alt'
-// button => 'null' (aucun attribut)
+// // Première Section   
+// // section => 'id'
+// // h1 => 'null' (aucun attribut)
+// // p => 'null' (aucun attribut)
+// // img => 'src' ; 'alt'
+// // button => 'null' (aucun attribut)
 
-// Seconde Section
-// section => 'id'
-// h2 => 'null' (aucun attribut)
-// p => 'null' (aucun attribut)
-// a => 'href'
+// // Seconde Section
+// // section => 'id'
+// // h2 => 'null' (aucun attribut)
+// // p => 'null' (aucun attribut)
+// // a => 'href'
 
 
 // // Donnez à l'image une largeur de 600px ; //
-img.style.width = `600px`;
+// img.style.width = `600px`;
 
 // // Donnez aux sections : un padding et une couleur de fond ; //
+
+// // Section 1 style //
+// section1.style.backgroundColor = `black`;
+// section1.style.color = `white`;
+// section1.style.padding = `30px`;
+// section1.style.display = `flex`;
+// section1.style.flexDirection = `column`;
+// section1.style.justifyContent = `center`;
+// section1.style.alignItems = `center`;
+// section1.style.textAlign = `center`;
+// section1.style.borderRadius = `20px`;
+
+// // button style //
+// btn.style.backgroundColor = `gray`;
+// btn.style.color = `white`;
+// btn.style.cursor = `pointer`;
+// btn.style.borderRadius = `5px`;
+// btn.style.padding = `8px`;
+
+// // Image style //
+// img.style.margin = `25px`;
+// img.style.background = `rgb(200,4,4)`;
+// img.style.background = `linear-gradient(90deg, rgba(200,4,4,1) 0%, rgba(0,0,0,1) 45%, rgba(0,14,255,1) 100%)`;
+// img.style.borderRadius = `20px`;
+
+// //Section 2 style //
+// section2.style.background = `rgb(200,4,4)`;
+// section2.style.background = `linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(200,4,4,1) 5%, rgba(0,0,0,1) 50%, rgba(200,4,4,1) 95%, rgba(0,0,0,1) 100%)`;
+// section2.style.color = `white`;
+// section2.style.padding = `20px`;
+// section2.style.display = `flex`;
+// section2.style.flexDirection = `column`;
+// section2.style.justifyContent = `center`;
+// section2.style.textAlign = `center`;
+// section2.style.padding = `30px`;
+// section2.style.borderRadius = `20px`;
+
+// //  a "lien" style //
+// a.style.color = `gray`;
+// a.style.textDecoration = `none`;
+// a.style.margin = `15px`;
+
+// //  Création d'une 3ème section avec un titre ('h2'), un paragraphe ('p') et un bouton ('button') //
+// let body = document.querySelector(`body`)
+// let section3 = document.createElement(`section`);
+// section3.setAttribute(`class`, `third-section`);
+// body.appendChild(section3);
+// let titleH2 = document.createElement(`h2`);
+// let paragapah4 = document.createElement(`p`);
+// let button2 = document.createElement(`button`);
+// section3.appendChild(titleH2);
+// titleH2.innerHTML = `Sous titre bis`;
+// section3.appendChild(paragapah4);
+// paragapah4.innerHTML = `Paragraphe 4`;
+// section3.appendChild(button2);
+// button2.innerHTML = `Je suis un nouveau bouton !`
+
+// // Section 3 style //
+// section3.style.display = `flex`;
+// section3.style.flexDirection = `column`;
+// section3.style.justifyContent = `center`;
+// section3.style.alignItems = `center`;
+// section3.style.textAlign = `center`;
+// section3.style.background = `rgba(0,14,255)`;
+// section3.style.background = `linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,14,255,1) 5%, rgba(0,0,0,1) 50%, rgba(0,14,255,1), rgba(0,0,0,1) 100%)`;
+// section3.style.color = `white`;
+// section3.style.padding = `30px`;
+// section3.style.borderRadius = `20px`;
+
+// // body style //
+// body.style.backgroundColor = `#393939`
+
+// // button bis //
+// button2.style.backgroundColor = `gray`;
+// button2.style.color = `white`;
+// button2.style.cursor = `pointer`;
+// button2.style.borderRadius = `5px`;
+// button2.style.padding = `8px`;
+// button2.style.margin = `10px`;
+
+// Correction //
+// Première Section   
+let section1 = document.querySelector(`#first-section`);
+let section1Title = document.querySelector(`#first-section > h1`);
+section1Title.innerHTML = `Titre de niveau 1`
+let sectionParagraphe = document.querySelectorAll(`p`);
+sectionParagraphe[0].innerHTML = `Paragraphe de la section 1`;
+let sectionImage = document.querySelector(`img`);
+sectionImage.setAttribute(`src`, `Red_Blue_New_v6.png`);
+sectionImage.setAttribute(`alt`, `Blue Empress and Red Emeperor`);
+sectionImage.setAttribute(`width`, `600px`);
+let button = document.querySelector(`button`);
+button.innerHTML = `Envoyer`;
+
+// Deuxième Section   
+let section2 = document.querySelector(`#second-section`);
+let section2Title = document.querySelector(`#second-section > h2`);
+section2Title.innerHTML = `Titre de niveau 2`;
+sectionParagraphe[1].innerHTML = `Paragraphe 1 de la section 2`;
+sectionParagraphe[2].innerHTML = `Paragraphe 2 de la section 2`;
+let link = document.querySelector(`a`);
+link.innerHTML = `Lien`;
+link.setAttribute(`target`, `_blank`);
+
+// Donnez aux sections : un padding et une couleur de fond ;
 
 // // Section 1 style //
 section1.style.backgroundColor = `black`;
@@ -761,19 +926,19 @@ section1.style.textAlign = `center`;
 section1.style.borderRadius = `20px`;
 
 // // button style //
-btn.style.backgroundColor = `gray`;
-btn.style.color = `white`;
-btn.style.cursor = `pointer`;
-btn.style.borderRadius = `5px`;
-btn.style.padding = `8px`;
+button.style.backgroundColor = `gray`;
+button.style.color = `white`;
+button.style.cursor = `pointer`;
+button.style.borderRadius = `5px`;
+button.style.padding = `8px`;
 
 // // Image style //
-img.style.margin = `25px`;
-img.style.background = `rgb(200,4,4)`;
-img.style.background = `linear-gradient(90deg, rgba(200,4,4,1) 0%, rgba(0,0,0,1) 45%, rgba(0,14,255,1) 100%)`;
-img.style.borderRadius = `20px`;
+sectionImage.style.margin = `25px`;
+sectionImage.style.background = `rgb(200,4,4)`;
+sectionImage.style.background = `linear-gradient(90deg, rgba(200,4,4,1) 0%, rgba(0,0,0,1) 45%, rgba(0,14,255,1) 100%)`;
+sectionImage.style.borderRadius = `20px`;
 
-// // Section 2 style //
+// //Section 2 style //
 section2.style.background = `rgb(200,4,4)`;
 section2.style.background = `linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(200,4,4,1) 5%, rgba(0,0,0,1) 50%, rgba(200,4,4,1) 95%, rgba(0,0,0,1) 100%)`;
 section2.style.color = `white`;
@@ -785,16 +950,17 @@ section2.style.textAlign = `center`;
 section2.style.padding = `30px`;
 section2.style.borderRadius = `20px`;
 
-// // a "lien" style //
-a.style.color = `gray`;
-a.style.textDecoration = `none`;
-a.style.margin = `15px`;
+// //  a "lien" style //
+link.style.color = `gray`;
+link.style.textDecoration = `none`;
+link.style.margin = `15px`;
 
-// // Création d'une 3ème section avec un titre ('h2'), un paragraphe ('p') et un bouton ('button') //
-let body = document.querySelector(`body`)
+// //  Création d'une 3ème section avec un titre ('h2'), un paragraphe ('p') et un bouton ('button') //
+let body = document.querySelector(`body`);
+let main = document.querySelector(`main`);
 let section3 = document.createElement(`section`);
 section3.setAttribute(`class`, `third-section`);
-body.appendChild(section3);
+main.appendChild(section3);
 let titleH2 = document.createElement(`h2`);
 let paragapah4 = document.createElement(`p`);
 let button2 = document.createElement(`button`);

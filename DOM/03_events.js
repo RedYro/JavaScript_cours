@@ -49,14 +49,14 @@ divRed.addEventListener(`click`, functionDivRed);
     // 2 - nom de la fonction "functionDivRed"
 
 function functionDivRed() {
-    divRed.style.backgroundColor = `blue`;
+    divRed.style.backgroundColor = `darkred`;
     divRed.style.borderRadius = `50%`;
-    divRed.innerHTML = `#blue`;
+    divRed.innerHTML = `#darkred`;
 }
 
 // 3 /div #orange
 
-// Avec fonction anonyme
+// Avec fonction anonyme // dblclick()
 
 let divOrange = document.querySelector(`#orange`);
 divOrange.addEventListener(`dblclick`, function(){
@@ -74,4 +74,33 @@ divInfo.addEventListener(`mouseover`, function (){
     divInfo.style.backgroundColor = `darkblue`;
     divInfo.style.borderRadius = `50%`;
     divInfo.innerHTML = `#darkblue`;
+})
+
+// 5 /div #primary
+
+// Avec fonction anonyme // mouseout()
+
+let divPrimary = document.querySelector(`#primary`)
+divPrimary.addEventListener(`mouseout`, function (){
+    divPrimary.style.backgroundColor = `lightblue`;
+    divPrimary.style.borderRadius = `50%`;
+    divPrimary.innerHTML = `#lightblue`;
+})
+
+// 6 /div #success
+
+// Click and Click 
+
+let divSuccess = document.querySelector(`#success`)
+divSuccess.addEventListener(`click`, function (){
+    if(divSuccess.classList.contains(`success`)){
+        divSuccess.classList.remove(`success`); // Suppression de la classe 'success'
+        divSuccess.classList.add(`green`); // Ajout de la classe 'green'
+        divSuccess.style.borderRadius = `50%`;
+        divSuccess.innerHTML = `#green`;
+    } else {
+        divSuccess.classList.remove(`green`);
+        divSuccess.classList.add(`success`);
+        divSuccess.innerHTML = `#success`
+    }
 })
