@@ -112,6 +112,8 @@ divSuccess.addEventListener(`click`, function (){
 
 let imageV1 = document.querySelector(`img`);
 imageV1.style.width = `500px`;
+imageV1.style.borderRadius = `30px`
+imageV1.style.border = `4px solid darkblue`
 let lesP = document.querySelectorAll(`.toggle p`);
 for(let tabP of lesP){
     tabP.style.textDecoration = `underline`;
@@ -139,7 +141,7 @@ lesP[2].addEventListener(`click`, function(){
 let interdit = document.querySelector(`#interdit`);
 interdit.addEventListener(`click`, function(event){
     // event.preventDefault();
-    alert(`Conitnuez plutôt à lire le cours !`);
+    alert(`Continuez plutôt à lire le cours !`);
 })
 // Méthode "preventDefault()", particulièrement utile pour éviter la soumission d'un formulaire recharge la page
 
@@ -160,39 +162,80 @@ submit.addEventListener(`click`, (event)=>{
 // --- Focus / Blur ---/
 
 // Focus // 
+
 prenom.addEventListener(`focus`, ()=>{ // L'utilisateur clique à l'intérieur du champ (input prenom)
-    prenom.style.width = `250px`
+    prenom.style.width = `250px`;
 })
 // Focus au chargement de la page // 
+
 // prenom.focus();
 
 // Blur // 
+
 prenom.addEventListener(`blur`, ()=>{ // L'utilisateur clique à l'extérieur du champ (input prenom)
     prenom.style.width = `500px`
 })
 
-// Change event //
-document.querySelector(`#html`).addEventListener(`change`, (event)=>{
-    console.log(event.target);
-    if(event.target.checked){
-        document.querySelector(`#labelHTML`).style.color = `red`;
-    } else{
-        document.querySelector(`#labelHTML`).style.color = `blue`;
-    }
-})
-document.querySelector(`#css`).addEventListener(`change`, (event)=>{
-    console.log(event.target);
-    if(event.target.checked){
-        document.querySelector(`#labelCSS`).style.color = `red`;
-    } else{
-        document.querySelector(`#labelCSS`).style.color = `blue`;
-    }
-})
-document.querySelector(`#js`).addEventListener(`change`, (event)=>{
-    console.log(event.target);
-    if(event.target.checked){
-        document.querySelector(`#labelJS`).style.color = `red`;
-    } else{
-        document.querySelector(`#labelJS`).style.color = `blue`;
-    }
-})
+// Change event // => déclenché lors d'un changement de valeur d'un élément HTML effectué par l'utilisateur 
+
+// Méthode 1 : sélection de chaque élément à part // 
+
+// document.querySelector(`#html`).addEventListener(`change`, (event)=>{
+//     if(event.target.checked){
+//         document.querySelector(`#labelHTML`).style.color = `red`;
+//     } else{
+//         document.querySelector(`#labelHTML`).style.color = `blue`;
+//     }
+// });
+// document.querySelector(`#css`).addEventListener(`change`, (event)=>{
+//     if(event.target.checked){
+//         document.querySelector(`#labelCSS`).style.color = `red`;
+//     } else{
+//         document.querySelector(`#labelCSS`).style.color = `blue`;
+//     }
+// });
+// document.querySelector(`#js`).addEventListener(`change`, (event)=>{
+//     if(event.target.checked){
+//         document.querySelector(`#labelJS`).style.color = `red`;
+//     } else{
+//         document.querySelector(`#labelJS`).style.color = `blue`;
+//     }
+// });
+
+// Change / for //
+
+// Méthode 2 : sélection d'un élément via index.array // 
+
+let check = document.getElementsByName(`technologies`); // Variable "check" dans laquelle on stock les input => array
+for(let button of check){
+    button.addEventListener(`change`, (event)=>{ // Event "change" sur les éléménts input cases à cochées 
+        // On vérifie la valeur "checked" de l'élément de l'objet event => "true" si la case est cochée
+        if(event.target.checked){
+            event.target.labels[0].style.color = `red`; // Application couleur "red"
+        } else{ // "false" si la case est décochée
+            // "event.target.labels[0]" représente le label de la case à cocher
+            // indice 0 au niveau du label car on possède un seul élément (balise) label
+            event.target.labels[0].style.color = `blue`; // Application couleur "blue"
+        }
+    })    
+};
+
+// Bouton "radio" // 
+let radio = document.getElementsByName(`level`);
+for(let button of radio){
+    button.addEventListener(`change`, (event)=>{
+        if(event.target.checked){
+            switch(event.target.value){
+                case `Acquis`:
+                    event.target.labels[0].style.color = `green`;
+                    break;
+                case `En cours d'acquisition`:
+                    event.target.labels[0].style.color = `orange`;
+                    break;
+                case `Non acquis`:
+                    event.target.labels[0].style.color = `red`;
+                    break;
+            }
+        }
+    })
+};

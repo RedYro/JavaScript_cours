@@ -22,7 +22,7 @@
             </div>
         </div>
     </header>
-    <main class="container mb-5">
+    <main class="container mb-5 p-5">
         <section class="row border border-danger p-4 rounded">
             <div class="col-8">
                 <h2 class="text-danger">"addEventListener()", exemple :</h2>
@@ -76,7 +76,7 @@
                 <p>Enlever une classe</p>
                 <p>Toggle une classe</p>
             </div>
-            <img src="Ahri_Midnight_v2.jpg" alt="Ahri" class="col-6">
+            <img src="Ahri_Midnight_v2.jpg" alt="Ahri" title="Ahri Midnight" class="col-6 p-0">
         </section>
 
         <!-- Formulaire -->
@@ -88,27 +88,41 @@
                         <label for="prenom" class="form-label">Votre prénom</label>
                         <input type="text" name="prenom" id="prenom" class="form-control" placeholder="Saisissez votre prénom">
                     </div>
-                    <!-- cases à cochées -->
+                    <!-- Cases à cochées -->
                     <h6>Technologies</h6>
                     <div class="form-check form-check-inline p-3">
                         <input class="form-check-input" type="checkbox" id="html" value="html" name="technologies">
                         <label class="form-check-label" for="html" id="labelHTML">HTML</label>
-                      </div>
-                      <div class="form-check form-check-inline p-3">
+                    </div>
+                    <div class="form-check form-check-inline p-3">
                         <input class="form-check-input" type="checkbox" id="css" value="css" name="technologies">
                         <label class="form-check-label" for="css" id="labelCSS">CSS</label>
-                      </div>
-                      <div class="form-check form-check-inline p-3">
+                    </div>
+                    <div class="form-check form-check-inline p-3">
                         <input class="form-check-input" type="checkbox" id="js" value="js" name="technologies">
                         <label class="form-check-label" for="js" id="labelJS">JavaScript</label>
-                      </div>
+                    </div>
+                      <!-- Bouton "Radio" -->
+                    <h6>Appréciations</h6>
+                    <div class="form-check form-check-inline p-3">
+                        <input class="form-check-input" type="radio" name="level" id="acquis" value="Acquis">
+                        <label class="form-check-label" for="acquis">Acquis</label>
+                    </div>
+                    <div class="form-check form-check-inline p-3">
+                        <input class="form-check-input" type="radio" name="level" id="enCours" value="En cours d'acquisition">
+                        <label class="form-check-label" for="enCours">En cours d'acquisition</label>
+                    </div>
+                    <div class="form-check form-check-inline p-3">
+                        <input class="form-check-input" type="radio" name="level" id="nonAcquis" value="Non acquis">
+                        <label class="form-check-label" for="nonAcquis">Non acquis</label>
+                    </div>
                 </div>
+                <!-- Bouton "Submit" -->
                 <div class="align-self-center">
                     <button type="submit" class="btn btn-primary" id="submit">Envoyer</button>
                 </div>
             </form>
         </section>
-        
     </main>
     <footer>
 
