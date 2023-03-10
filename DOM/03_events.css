@@ -75,7 +75,11 @@
     margin: auto;
 }
 
-.green{
+/* .green{
     background-color: green !important;
-    /* border-radius: 50%; */
+    border-radius: 50%;
+} */
+
+.hide{
+    display: none;
 }

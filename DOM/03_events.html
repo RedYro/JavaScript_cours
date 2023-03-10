@@ -16,8 +16,9 @@
     <header>
         <div class="p-5 mb-4 bg-light rounded-3">
             <div class="container-fluid py-5">
-                <h1 class="display-5 fw-bold">Cours JavaScript</h1>
+                <h1 id="h1" class="display-5 fw-bold">Cours JavaScript</h1>
                 <p class="col-md-8 fs-4">Les évènements</p>
+                <p>Du temps à perdre ? <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank" id="interdit">Cliquez ici</a></p>
             </div>
         </div>
     </header>
@@ -44,7 +45,7 @@
         </section>
         <section class="row border border-info p-4 rounded my-4">
             <div class="col-8">
-                <h2 class="text-info">Autre exemple : "dblclick"</h2>
+                <h2 class="text-info">Autre exemple : "mouseover"</h2>
                 <p>Un survol sur la div #info</p>
             </div>
             <div class="col-4">
@@ -62,13 +63,52 @@
         </section>
         <section class="row border border-success p-4 rounded my-4">
             <div class="col-8">
-                <h2 class="text-success">Autre exemple : "mouseout"</h2>
-                <p>Cliquer une fois pour transformer la div #sucess et à nouveau pour revenir à la normal</p>
+                <h2 class="text-success">Autre exemple : "click and click"</h2>
+                <p>Cliquer une fois pour transformer la div #sucess et à nouveau pour revenir à l'état d'origine</p>
             </div>
             <div class="col-4">
-                <div id="success" class="success green">#success</div>
+                <div id="success" class="success">#success</div>
             </div>
         </section>
+        <section class="row border border-dark p-4 rounded my-4 flex-column justify-content-center align-items-center">
+            <div class="col-6 d-flex flex-column  justify-content-center align-items-center mb-5 toggle">
+                <p>Ajouter une classe</p>
+                <p>Enlever une classe</p>
+                <p>Toggle une classe</p>
+            </div>
+            <img src="Ahri_Midnight_v2.jpg" alt="Ahri" class="col-6">
+        </section>
+
+        <!-- Formulaire -->
+        <section class="row border border-dark rounded p-4 my-4">
+            <form class="d-flex flex-column" method="post" action="#">
+                <div class="col">
+                    <!-- Champ prenom -->
+                    <div class="mb-3">
+                        <label for="prenom" class="form-label">Votre prénom</label>
+                        <input type="text" name="prenom" id="prenom" class="form-control" placeholder="Saisissez votre prénom">
+                    </div>
+                    <!-- cases à cochées -->
+                    <h6>Technologies</h6>
+                    <div class="form-check form-check-inline p-3">
+                        <input class="form-check-input" type="checkbox" id="html" value="html" name="technologies">
+                        <label class="form-check-label" for="html" id="labelHTML">HTML</label>
+                      </div>
+                      <div class="form-check form-check-inline p-3">
+                        <input class="form-check-input" type="checkbox" id="css" value="css" name="technologies">
+                        <label class="form-check-label" for="css" id="labelCSS">CSS</label>
+                      </div>
+                      <div class="form-check form-check-inline p-3">
+                        <input class="form-check-input" type="checkbox" id="js" value="js" name="technologies">
+                        <label class="form-check-label" for="js" id="labelJS">JavaScript</label>
+                      </div>
+                </div>
+                <div class="align-self-center">
+                    <button type="submit" class="btn btn-primary" id="submit">Envoyer</button>
+                </div>
+            </form>
+        </section>
+        
     </main>
     <footer>
 

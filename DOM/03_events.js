@@ -80,11 +80,13 @@ divInfo.addEventListener(`mouseover`, function (){
 
 // Avec fonction anonyme // mouseout()
 
+let h1 = document.querySelector(`#h1`);
 let divPrimary = document.querySelector(`#primary`)
 divPrimary.addEventListener(`mouseout`, function (){
     divPrimary.style.backgroundColor = `lightblue`;
     divPrimary.style.borderRadius = `50%`;
     divPrimary.innerHTML = `#lightblue`;
+    h1.style.color = `gray`;
 })
 
 // 6 /div #success
@@ -95,12 +97,102 @@ let divSuccess = document.querySelector(`#success`)
 divSuccess.addEventListener(`click`, function (){
     if(divSuccess.classList.contains(`success`)){
         divSuccess.classList.remove(`success`); // Suppression de la classe 'success'
-        divSuccess.classList.add(`green`); // Ajout de la classe 'green'
+        //divSuccess.classList.add(`green`); // Ajout de la classe 'green'
         divSuccess.style.borderRadius = `50%`;
+        divSuccess.style.backgroundColor = `green`;
         divSuccess.innerHTML = `#green`;
     } else {
-        divSuccess.classList.remove(`green`);
+        //divSuccess.classList.remove(`green`);
         divSuccess.classList.add(`success`);
         divSuccess.innerHTML = `#success`
+        divSuccess.style.backgroundColor = `rgb(0, 55, 25)`;
+        divSuccess.style.borderRadius = `0%`;
+    }
+})
+
+let imageV1 = document.querySelector(`img`);
+imageV1.style.width = `500px`;
+let lesP = document.querySelectorAll(`.toggle p`);
+for(let tabP of lesP){
+    tabP.style.textDecoration = `underline`;
+    tabP.style.color = `darkblue`;
+    tabP.style.fontWeight = `bolder`;
+}
+lesP[0].addEventListener(`click`, function(){
+    imageV1.classList.add(`hide`);
+})
+lesP[1].addEventListener(`click`, function(){
+    imageV1.classList.remove(`hide`);
+})
+lesP[2].addEventListener(`click`, function(){
+    imageV1.classList.toggle(`hide`);
+})
+
+// Modifier le comportement par défaut en cas d'évènement //
+
+// Les events sont associés à une action par défaut,
+// La fonction de gestionnaire ("function" dans les paramètres de l'écouteur d'évènement), par défaut, lorqu'elle est exécutée, reçoit l'event objet en tant qu'argument (cet objet a été crée lorsque l'event / l'action qui vous intéresse s'est produit)
+// l'objet "event", "e", "ev" est un objet JS, contient des informations sur l'action qui vient de se produire, avec de nombreuses propriétés et méthodes.
+// Définir l'event en tant que paramètre de votre fonction est facultatif mais, parfois il est utile que la fonction de gestionnaire connaisse l'event qui s'est produit
+
+// Il est possible d'annuler ce comportement par défaut en appelant la méthode "preventDefault()" sur l'objet event
+let interdit = document.querySelector(`#interdit`);
+interdit.addEventListener(`click`, function(event){
+    // event.preventDefault();
+    alert(`Conitnuez plutôt à lire le cours !`);
+})
+// Méthode "preventDefault()", particulièrement utile pour éviter la soumission d'un formulaire recharge la page
+
+// --------------------------------- Gestion formulaires --------------------------------- //
+
+let prenom = document.querySelector(`#prenom`);
+// En JS, pour accéder à la valeur d'une zone de texte dans un formulaire, on utilise la propriété ".value"
+// prenom.value = `Greg`;
+
+let submit = document.querySelector(`#submit`);
+submit.addEventListener(`click`, (event)=>{
+    // On récupère la valeur de l'élément input "prenom"
+    let prenomValue = prenom.value;  
+    event.preventDefault();
+    console.log(prenomValue);
+})
+
+// --- Focus / Blur ---/
+
+// Focus // 
+prenom.addEventListener(`focus`, ()=>{ // L'utilisateur clique à l'intérieur du champ (input prenom)
+    prenom.style.width = `250px`
+})
+// Focus au chargement de la page // 
+// prenom.focus();
+
+// Blur // 
+prenom.addEventListener(`blur`, ()=>{ // L'utilisateur clique à l'extérieur du champ (input prenom)
+    prenom.style.width = `500px`
+})
+
+// Change event //
+document.querySelector(`#html`).addEventListener(`change`, (event)=>{
+    console.log(event.target);
+    if(event.target.checked){
+        document.querySelector(`#labelHTML`).style.color = `red`;
+    } else{
+        document.querySelector(`#labelHTML`).style.color = `blue`;
+    }
+})
+document.querySelector(`#css`).addEventListener(`change`, (event)=>{
+    console.log(event.target);
+    if(event.target.checked){
+        document.querySelector(`#labelCSS`).style.color = `red`;
+    } else{
+        document.querySelector(`#labelCSS`).style.color = `blue`;
+    }
+})
+document.querySelector(`#js`).addEventListener(`change`, (event)=>{
+    console.log(event.target);
+    if(event.target.checked){
+        document.querySelector(`#labelJS`).style.color = `red`;
+    } else{
+        document.querySelector(`#labelJS`).style.color = `blue`;
     }
 })
