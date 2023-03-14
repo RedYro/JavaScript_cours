@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Bootstrap CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="04_manipulation.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Introduction DOM : Manipulation">
+    <meta name="author" content="Grégory LYFOUNG">
+    <title> JS DOM : Manipulation </title>
+</head>
+<body>
+    <header>
+        <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+              <h1 class="display-5 fw-bold">Cours JavaScript : Manipulation</h1>
+            </div>
+          </div>
+    </header>
+    <main class="container mb-5">
+        <section class="row py-4 mx-auto justify-content-center">
+            <div class="col-12 mb-5">
+                <h2>Validation du formulaire</h2>
+            </div>
+            <div class="col-9">
+                <!-- div pour erreur sur champs vides -->
+                <div id="info"></div>
+                <form action="#" method="post" id="form_inscription">
+                    <!-- champ prénom -->
+                    <div class="my-2">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" name="prenom" id="prenom" placeholder="Écrivez votre prénom" class="form-control">
+                        <div class="error"></div>
+                    </div>
+                    <!-- champ nom -->
+                    <div class="my-2">
+                        <label for="nom">Nom</label>
+                        <input type="text" name="nom" id="nom" placeholder="Écrivez votre nom" class="form-control">
+                        <div class="error"></div>
+                    </div>
+                    <!-- champ email -->
+                    <div class="my-2">
+                        <label for="mail">Mail</label>
+                        <input type="text" name="mail" id="mail" placeholder="Indiquez votre mail" class="form-control">
+                        <div class="error"></div>
+                    </div>
+                    <!-- champ mdp -->
+                    <div class="my-2">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" name="password" id="password" class="form-control">
+                        <div class="error"></div>
+                    </div>
+                    <!-- champ confirmation mdp -->
+                    <div class="my-2">
+                        <label for="confpassword">Confirmez votre mot de passe</label>
+                        <input type="password" name="confpassword" id="confpassword" class="form-control">
+                        <div class="error"></div>
+                    </div>
+                    <button type="submit" id="submit" class="btn btn-success my-2">S'inscrire</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+
+    <script src="04_manipulation.js"></script>
+
+</body>
+</html>

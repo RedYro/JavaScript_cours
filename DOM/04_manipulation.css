@@ -1,0 +1,19 @@
+.errorBis{
+    border: 2px solid rgb(239, 87, 87);
+}
+
+.valid{
+    border: 2px solid rgb(10, 197, 0);
+}
+
+form > div {
+    position: relative;
+}
+
+.error{
+    position: absolute;
+    top: 0;
+    right: -3px;
+    font-size: 10px;
+    width: 300px;
+}
