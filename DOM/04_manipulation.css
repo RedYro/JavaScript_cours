@@ -26,4 +26,5 @@ section:nth-child(2){
 
 #Ashe{
     position: absolute;
+    border-radius: 5%;
 }

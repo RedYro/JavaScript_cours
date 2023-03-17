@@ -120,16 +120,44 @@ function Finscription(event){
 // Part 2 : Keydown //
 
 document.addEventListener("keydown", clavier);
+// Propriété "offsetLeft" envoie la position du haut (en px) par rapport au haut de l'élément offsetParent. L'élément offsetParent est l'ancêtre le plus proche qui a une position autre que statique
+// La propriété offsetLeft renvoie la postion gauche (en px) par 
 function clavier(event){
     let ashe = document.querySelector(`#Ashe`);
-    console.log(event);
-    if (event.key == `ArrowUp`){
-        ashe.style.top = ashe.offsetTop - 10 + `px`;
-    } else if(event.key == `ArrowRight`){
-        ashe.style.left = ashe.offsetLeft + 10 + `px`;
-    } else if(event.key == `ArrowLeft`){
-        ashe.style.left = ashe.offsetLeft - 10 + `px`;
-    } else if(event.key == `ArrowDown`){
-        ashe.style.top = ashe.offsetTop + 10 + `px`;
+    // if (event.key == `z`){
+    //     ashe.style.top = ashe.offsetTop - 10 + `px`;
+    // } else if(event.key == `d`){
+    //     ashe.style.left = ashe.offsetLeft + 10 + `px`;
+    // } else if(event.key == `q`){
+    //     ashe.style.left = ashe.offsetLeft - 10 + `px`;
+    // } else if(event.key == `s`){
+    //     ashe.style.top = ashe.offsetTop + 10 + `px`;
+    // } else if (event.key == "a") {
+    //     ashe.style.top = ashe.offsetTop - 10 + 'px';
+    //     ashe.style.left = ashe.offsetLeft - 10 + 'px';
+    // } else if (event.key == "e") {
+    //     ashe.style.top = ashe.offsetTop - 10 + 'px';
+    //     ashe.style.left = ashe.offsetLeft + 10 + 'px';
+    // } else if (event.key == "w") {
+    //     ashe.style.top = ashe.offsetTop + 10 + 'px';
+    //     ashe.style.left = ashe.offsetLeft - 10 + 'px';
+    // } else if (event.key == "c") {
+    //     ashe.style.top = ashe.offsetTop + 10 + 'px';
+    //     ashe.style.left = ashe.offsetLeft + 10 + 'px';
+    // }
+    // Switch //
+    switch (event.key) {
+        case `z`:
+            ashe.style.top = ashe.offsetTop - 10 + `px`;
+            break;
+        case `d`:
+            ashe.style.left = ashe.offsetLeft + 10 + `px`;
+            break;
+        case `s`:
+            ashe.style.top = ashe.offsetTop + 10 + `px`;
+            break;
+        case `q`:
+            ashe.style.left = ashe.offsetLeft - 10 + `px`;
+            break;
     }
 }
