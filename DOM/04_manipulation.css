@@ -22,9 +22,29 @@ form > div {
 
 section:nth-child(2){
     position: relative;
+    height: 600px;
 }
 
 #Ashe{
     position: absolute;
     border-radius: 5%;
+}
+
+.carousel{
+    height: 500px;
+    width: 1000px;
+    user-select: none;
+}
+
+.carousel img{
+    border: 10px solid rgb(70, 0, 102);
+}
+
+i{
+    font-size: 30px;
+    color: rgb(70, 0, 102);;
+}
+
+h2{
+    color: darkred;
 }

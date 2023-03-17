@@ -124,6 +124,7 @@ document.addEventListener("keydown", clavier);
 // La propriété offsetLeft renvoie la postion gauche (en px) par 
 function clavier(event){
     let ashe = document.querySelector(`#Ashe`);
+    // if with key //
     // if (event.key == `z`){
     //     ashe.style.top = ashe.offsetTop - 10 + `px`;
     // } else if(event.key == `d`){
@@ -132,7 +133,9 @@ function clavier(event){
     //     ashe.style.left = ashe.offsetLeft - 10 + `px`;
     // } else if(event.key == `s`){
     //     ashe.style.top = ashe.offsetTop + 10 + `px`;
-    // } else if (event.key == "a") {
+    // } 
+    
+    // else if (event.key == "a") {
     //     ashe.style.top = ashe.offsetTop - 10 + 'px';
     //     ashe.style.left = ashe.offsetLeft - 10 + 'px';
     // } else if (event.key == "e") {
@@ -145,19 +148,165 @@ function clavier(event){
     //     ashe.style.top = ashe.offsetTop + 10 + 'px';
     //     ashe.style.left = ashe.offsetLeft + 10 + 'px';
     // }
+
+    // if Mario //
+        //---------------------- if avec .key---------------------
+        // if(event.key == "ArrowUp"){
+
+        //     mario.style.top = mario.offsetTop - 10 + 'px';
+    
+        // }else if(event.key == "ArrowRight"){
+    
+        //     mario.style.left = mario.offsetLeft + 10 + 'px';
+        //     mario.style.transform = "scaleX(1)";
+    
+        // }else if(event.key == "ArrowDown"){
+    
+        //     mario.style.top = mario.offsetTop + 10 + 'px';
+            
+        // }else if(event.key == "ArrowLeft"){
+    
+        //     mario.style.left = mario.offsetLeft - 10 + 'px';
+        //     mario.style.transform = "scaleX(-1)";
+            
+        // }else if (event.key == "z") {
+        //     mario.style.top = mario.offsetTop - 10 + 'px';  // en haut a gauche
+        //     mario.style.left = mario.offsetLeft - 10 + 'px';
+        //     mario.style.transform = "scaleX(-1)";
+        //     mario.style.rotate = "40deg";
+    
+        // }
+        // else if (event.key == "s") {
+        //     mario.style.top = mario.offsetTop - 10 + 'px';  // en haut a droite
+        //     mario.style.left = mario.offsetLeft + 10 + 'px';
+        //     mario.style.transform = "scaleX(1)";
+        //     mario.style.rotate = "-40deg";
+        // }
+        // else if (event.key == "q") {
+        //     mario.style.top = mario.offsetTop + 10 + 'px';  // en bas a gauche
+        //     mario.style.left = mario.offsetLeft - 10 + 'px';
+        //     mario.style.transform = "scaleX(-1)";
+        //     mario.style.rotate = "-40deg";
+        // }
+        // else if (event.key == "d") {
+        //     mario.style.top = mario.offsetTop + 10 + 'px';  // en bas a droite
+        //     mario.style.left = mario.offsetLeft + 10 + 'px';
+        //     mario.style.transform = "scaleX(1)";
+        //     mario.style.rotate = "40deg";
+        // }
+
     // Switch //
-    switch (event.key) {
-        case `z`:
-            ashe.style.top = ashe.offsetTop - 10 + `px`;
+    // switch (event.key) {
+    //     case `z`:
+    //         ashe.style.top = ashe.offsetTop - 10 + `px`;
+    //         break;
+    //     case `d`:
+    //         ashe.style.left = ashe.offsetLeft + 10 + `px`;
+    //         break;
+    //     case `s`:
+    //         ashe.style.top = ashe.offsetTop + 10 + `px`;
+    //         break;
+    //     case `q`:
+    //         ashe.style.left = ashe.offsetLeft - 10 + `px`;
+    //         break;
+    // }
+
+    // KeyCode //
+    if (event.keyCode == 38){
+        ashe.style.top = ashe.offsetTop - 10 + `px`;
+    } else if(event.keyCode == 39){
+        ashe.style.left = ashe.offsetLeft + 10 + `px`;
+    } else if(event.keyCode == 37){
+        ashe.style.left = ashe.offsetLeft - 10 + `px`;
+    } else if(event.keyCode == 40){
+        ashe.style.top = ashe.offsetTop + 10 + `px`;
+    }
+}
+
+// Part 3 : Carousel //
+
+let arrowRight = document.querySelector(`#right`);
+arrowRight.addEventListener("click", carouselImageRight);
+function carouselImageRight(){
+    let img1 = document.querySelector(`#carousel`).getAttribute(`src`);
+    switch (img1) {
+        case `Ahri_Fox_Fire.jpg`:
+            document.querySelector(`#carousel`).src = `Ahri-ASU-Fox-Fire-Ahri.jpg`;
             break;
-        case `d`:
-            ashe.style.left = ashe.offsetLeft + 10 + `px`;
+        case `Ahri-ASU-Fox-Fire-Ahri.jpg`:
+            document.querySelector(`#carousel`).src = `ahri_Popstar_original.jpg`;
             break;
-        case `s`:
-            ashe.style.top = ashe.offsetTop + 10 + `px`;
+        case `ahri_Popstar_original.jpg`:
+            document.querySelector(`#carousel`).src = `ahri_Popstar.jpg`;
             break;
-        case `q`:
-            ashe.style.left = ashe.offsetLeft - 10 + `px`;
+        case `ahri_Popstar.jpg`:
+            document.querySelector(`#carousel`).src = `ahri_Popstar_bis.jpg`;
             break;
+        case `ahri_Popstar_bis.jpg`:
+            document.querySelector(`#carousel`).src = `Ahri_Fox_Fire.jpg`;
+            break;
+    }
+}
+
+let arrowLeft = document.querySelector(`#left`);
+arrowLeft.addEventListener("click", carouselImageLeft);
+function carouselImageLeft(){
+    let img2 = document.querySelector(`#carousel`).getAttribute(`src`);
+    switch (img2) {
+        case `Ahri_Fox_Fire.jpg`:
+            document.querySelector(`#carousel`).src = `ahri_Popstar_bis.jpg`;
+            break;
+        case `ahri_Popstar_bis.jpg`:
+            document.querySelector(`#carousel`).src = `ahri_Popstar.jpg`;
+            break;
+        case `ahri_Popstar.jpg`:
+            document.querySelector(`#carousel`).src = `ahri_Popstar_original.jpg`;
+            break;
+        case `ahri_Popstar_original.jpg`:
+            document.querySelector(`#carousel`).src = `Ahri-ASU-Fox-Fire-Ahri.jpg`;
+            break;
+        case `Ahri-ASU-Fox-Fire-Ahri.jpg`:
+            document.querySelector(`#carousel`).src = `Ahri_Fox_Fire.jpg`;
+            break;
+    }
+}
+
+let img = document.querySelector(`#carousel`);
+img.addEventListener("click", carouselImageLeft);
+function carouselImageLeft(){
+    let img3 = document.querySelector(`#carousel`).getAttribute(`src`);
+    switch (img3) {
+        case `Ahri_Fox_Fire.jpg`:
+            document.querySelector(`#carousel`).src = `Ahri-ASU-Fox-Fire-Ahri.jpg`;
+            break;
+        case `Ahri-ASU-Fox-Fire-Ahri.jpg`:
+            document.querySelector(`#carousel`).src = `ahri_Popstar_original.jpg`;
+            break;
+        case `ahri_Popstar_original.jpg`:
+            document.querySelector(`#carousel`).src = `ahri_Popstar.jpg`;
+            break;
+        case `ahri_Popstar.jpg`:
+            document.querySelector(`#carousel`).src = `ahri_Popstar_bis.jpg`;
+            break;
+        case `ahri_Popstar_bis.jpg`:
+            document.querySelector(`#carousel`).src = `Ahri_Fox_Fire.jpg`;
+            break;
+    }
+}
+
+// Part 3 : Carousel automatique //
+
+let img0 = 0; // Initialisation de la variable qui va nous permettre d'afficher les images
+let timer = window.setInterval(`slider()`, 1500); // Initialisation de la variable timer qui s'appuie sur la fonction prédéfinie setInterval() :en premier argument on appel la fonction que l'on va créer, et en deuxième le temps en millisecondes
+// setInterval : méthode qui permet d'appeler de manière répétée une fonction, avec un délai fixe entre chaque appel => lance une fonction après un temps bien précis toutes les millisecondes
+
+function slider(){
+    let imgSlider = document.querySelector(`#slider`);
+    imgSlider.setAttribute(`src`, `LoL` + img0 + `.jpg`); // On appel de façon automatique les images par leur nom
+    img0++; // Incrémentation de la variable img0
+    // src = `LoL1.jpg`
+    if (img0 == 6) {
+        // clearInterval(timer); // Permet de stopper le "setInterval" dès que la variable atteint 6 
+        img0 = 0;
     }
 }
