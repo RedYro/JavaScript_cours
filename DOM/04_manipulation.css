@@ -17,3 +17,13 @@ form > div {
     font-size: 10px;
     width: 300px;
 }
+
+/* Keydown */
+
+section:nth-child(2){
+    position: relative;
+}
+
+#Ashe{
+    position: absolute;
+}

@@ -115,3 +115,21 @@ function Finscription(event){
         }
     }
 }
+
+
+// Part 2 : Keydown //
+
+document.addEventListener("keydown", clavier);
+function clavier(event){
+    let ashe = document.querySelector(`#Ashe`);
+    console.log(event);
+    if (event.key == `ArrowUp`){
+        ashe.style.top = ashe.offsetTop - 10 + `px`;
+    } else if(event.key == `ArrowRight`){
+        ashe.style.left = ashe.offsetLeft + 10 + `px`;
+    } else if(event.key == `ArrowLeft`){
+        ashe.style.left = ashe.offsetLeft - 10 + `px`;
+    } else if(event.key == `ArrowDown`){
+        ashe.style.top = ashe.offsetTop + 10 + `px`;
+    }
+}
