@@ -1,38 +1,39 @@
-// let btn = document.querySelector(`.btn`);
-// let BgBtn = document.querySelector(`.switch`);
-// let icone = document.querySelector(`i`);
-// let navBarDesktop = document.querySelector(`.navbar-desktop`);
-// let containerNight = document.querySelector(`.container-fluid`);
-// let title1 = document.querySelector(`h1`);
+// btn "Abonnez-vous" //
 
+let btnAbonne = document.querySelector(`.btn-abonner`);
+let check = document.createElement(`i`);
+check.setAttribute(`class`, `bi`);
 
-// btn.addEventListener("click", function(){
-//     if(btn.classList.contains(`btn`)){
-//         btn.classList.remove(`btn`);
-//         btn.classList.add(`btnNight`);
-//         BgBtn.classList.remove(`switch`);
-//         BgBtn.classList.add(`switchNight`);
-//         icone.classList.remove(`bi-sun-fill`);
-//         icone.classList.add(`bi-moon-fill`);
-//         navBarDesktop.classList.remove(`navbar-desktop`);
-//         navBarDesktop.classList.add(`navbar-desktopNight`);
-//         containerNight.classList.remove(`container-fluid`);
-//         containerNight.classList.add(`container-fluidNight`);
-//         title1.style.color = `white`;
-//     } else {
-//         btn.classList.remove(`btnNight`);
-//         btn.classList.add(`btn`);
-//         BgBtn.classList.remove(`switchNight`);
-//         BgBtn.classList.add(`switch`);
-//         icone.classList.add(`bi-sun-fill`);
-//         icone.classList.remove(`bi-moon-fill`);
-//         navBarDesktop.classList.add(`navbar-desktop`);
-//         navBarDesktop.classList.remove(`navbar-desktopNight`);
-//         containerNight.classList.add(`container-fluid`);
-//         containerNight.classList.remove(`container-fluidNight`);
-//         title1.style.color = `black`;
-//     }
+// btnAbonne.addEventListener(`click`, function abonne(){
+//     if(btnAbonne.classList.contains(`btn-abonner`)){
+//         btnAbonne.innerText = `Abonné`;
+//         btnAbonne.appendChild(check);
+//         check.classList.toggle(`bi-check-lg`);
+//     }  
 // })
+
+btnAbonne.addEventListener(`click`, function abonne(){
+    if(btnAbonne.classList.contains(`btn-abonner`)){
+        btnAbonne.innerText = `Abonné`;
+        btnAbonne.appendChild(check);
+        check.classList.add(`bi-check-lg`);
+        btnAbonne.classList.remove(`btn-abonner`)
+        btnAbonne.classList.add(`btn-abonner-check`)
+    } else{
+        btnAbonne.innerText = `Abonnez-vous`;
+        check.classList.remove(`bi-check-lg`);
+        btnAbonne.classList.remove(`btn-abonner-check`)
+        btnAbonne.classList.add(`btn-abonner`)
+    }
+})
+
+// smiley //
+
+let smiley = document.querySelector(`.bi-emoji-neutral`);
+
+smiley.addEventListener(`click`, function smileyCheck(){
+    smiley.classList.toggle(`bi-emoji-wink-fill`);
+})
 
 // On sélectionne et on stock //
 
@@ -57,7 +58,6 @@ let container = document.querySelector(`.container-fluid`);
 // titre h1
 let title = document.querySelector(`h1`);
 
-// switchBox.addEventListener(`click`, changeMode);
 switchBox.addEventListener(`click`, function changeMode(){
     // div "container-fluid"
     container.classList.toggle(`container-change`);
@@ -77,9 +77,13 @@ switchBox.addEventListener(`click`, function changeMode(){
     if (btnChange.classList.contains(`bi-sun-fill`)){
         btnChange.classList.remove(`bi-sun-fill`);
         btnChange.classList.add(`bi-moon-fill`);
+        btnAbonne.classList.add(`btn-abonner-ter`);
+        smiley.classList.add(`bi-emoji-neutral-bis`);
     } else{
         btnChange.classList.remove(`bi-moon-fill`);
         btnChange.classList.add(`bi-sun-fill`);
+        btnAbonne.classList.remove(`btn-abonner-ter`);
+        smiley.classList.remove(`bi-emoji-neutral-bis`);
     }
     // btn position 
     if (btn.classList.contains(`btn`)){
@@ -97,5 +101,55 @@ let menuList = document.querySelector(`.navbar-mobile > i`)
 let menuListBis = document.querySelector(`.navbar-mobile-menu`)
 menuList.addEventListener(`click`, function menuResponsive(){
     menuListBis.classList.toggle(`menu-display`);
-    menuList.classList.toggle(`bi-x-lg`);
+    menuList.classList.toggle(`bi-x`);
+})
+
+// Dark mode responsive //
+
+let switchBoxResponsive = document.querySelector(`.switch-bis`);
+let navMobile = document.querySelector(`.navbar-mobile-menu`);
+let linksRespoonsive = document.querySelectorAll(`.navbar-mobile-list a`);
+let btnBis = document.querySelector(`.btn-bis`);
+let btnChangeResponsive = document.querySelector(`.switch-bis i`);
+
+
+switchBoxResponsive.addEventListener(`click`, function changeModeResponsive(){
+    // div "switch"
+    switchBoxResponsive.classList.toggle(`switch-change`);
+    // nav background
+    navMobile.classList.toggle(`nav-bis-change`);
+    // container background
+    container.classList.toggle(`container-change-responsive`);
+    // title color
+    title.classList.toggle(`title-change-responsive`);
+    // links color
+    for (let a of linksRespoonsive) {
+        a.classList.toggle(`link-change-bis`);
+    }
+    // btn border color 
+    btnBis.classList.toggle(`btn-change-bis`);
+    // icône change
+    if (btnChangeResponsive.classList.contains(`bi-sun-fill`)){
+        btnChangeResponsive.classList.remove(`bi-sun-fill`);
+        btnChangeResponsive.classList.add(`bi-moon-fill`);
+        btnAbonne.classList.add(`btn-abonner-responsive`);
+        smiley.classList.add(`bi-emoji-neutral-responsive`);
+        menuList.classList.add(`bi-list-responsive`);
+        menuList.classList.add(`bi-x-responsive`);
+    } else{
+        btnChangeResponsive.classList.remove(`bi-moon-fill`);
+        btnChangeResponsive.classList.add(`bi-sun-fill`);
+        btnAbonne.classList.remove(`btn-abonner-responsive`);
+        smiley.classList.remove(`bi-emoji-neutral-responsive`);
+        menuList.classList.remove(`bi-list-responsive`);
+        menuList.classList.remove(`bi-x-responsive`);
+    }
+    // btn position 
+    if (btnBis.classList.contains(`btn-bis`)){
+        btnBis.classList.remove(`btn-bis`);
+        btnBis.classList.add(`btn-position-bis`);
+    } else{
+        btnBis.classList.remove(`btn-position-bis`);
+        btnBis.classList.add(`btn-bis`);
+    }
 })
