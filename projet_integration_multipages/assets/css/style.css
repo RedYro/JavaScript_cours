@@ -1,0 +1,140 @@
+/* Style page 1 (accueil) */
+
+/* Variables */
+
+:root{
+    --font1: 'Roboto', sans-serif;
+    --font2: 'Source Sans Pro', sans-serif;
+    --color1: rgb(37, 34, 34)
+}
+
+/* Style section 01 */
+
+.section01{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(37, 34, 34);
+}
+
+.section01 div{
+    padding: 4rem;
+    margin: 2rem;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.section01>:nth-child(1){
+    background-image: url(../img/s1b1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 33.33%;
+    border-radius: 10px;
+}
+
+.section01>:nth-child(2){
+    background-image: url(../img/s1b2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 33.33%;
+    border-radius: 10px;
+}
+
+.section01>:nth-child(3){
+    background-image: url(../img/s1b3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 33.33%;
+    border-radius: 10px;
+}
+
+.section01 a{
+    font-family: var(--font1);
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 10px;
+    padding: .5rem 1rem .5rem 1rem;
+}
+
+.section01 a:hover{
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 10px;
+    color: black;
+    font-size: 1.1rem;
+    transition: 1s;
+}
+
+/* Style section 02 */
+
+.section02{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color1);
+    width: 100%;
+    margin: 2rem 0 5rem 0;
+}
+
+.text1{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text1 p{
+    font-family: var(--font2);
+    text-align: center;
+    padding: 0 0 1.5rem 0;
+    color: white;
+    cursor: default;
+}
+
+.text1 h1{
+    font-family: var(--font1);
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    font-size: 2.5rem;
+    cursor: default;
+}
+
+.section02 :nth-child(2){
+    width: 50%;
+}
+
+.section02 img{
+    width: 100%;
+}
+
+/* Style section 03 */
+
+.section03{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+}
+
+.section03>:nth-child(1){
+    width: 40%;
+}
+
+.section03>:nth-child(2){
+    width: 60%;
+}
+
+.section03 img{
+    display: flex;
+    width: 100%;
+}
+
+.section03 video{
+    width: 100%;
+}

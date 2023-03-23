@@ -1,0 +1,143 @@
+/* Style page 2 (à propos) */
+
+/* Variables */
+
+:root{
+    --font1: 'Roboto', sans-serif;
+    --font2: 'Source Sans Pro', sans-serif;
+    --color1: rgb(37, 34, 34)
+}
+
+/* Style section 01 */
+
+.section01{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5rem 6rem 4rem 6rem ;
+}
+
+.img1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 5rem 1rem 5rem 1rem;
+    background-image: url(../img/s1b3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+h1{
+    font-size: 2rem;
+    font-family: var(--font1);
+    text-align: center;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 10px;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    cursor: default;
+}
+
+.img1 p{
+    text-align: center;
+    font-family: var(--font2);
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    cursor: default;
+}
+
+/* Style section 02 */
+
+.section02{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 1rem 2rem 4rem 2rem ;
+    background-image: url(../img/s2b2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section02 div{
+    padding: .5rem 2rem 2rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.section02 h2{
+    padding: 1rem;
+    font-family: var(--font1);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, .9);
+    cursor: default;
+}
+
+.section02 p{
+    padding: 0 1.5rem 0 1.5rem;
+    font-weight: lighter;
+    font-family: var(--font2);
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, .9);
+    cursor: default;
+}
+
+/* Style section03 */
+
+.section03{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+    text-align: center;
+    width: 100%;
+}
+
+.section03 h2{
+    font-family: var(--font1);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: default;
+}
+
+.img2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 1rem 2rem 1rem;
+}
+
+.img2 div{
+    width: 500px;
+    height: 300px;
+}
+
+.img2>:nth-child(1){
+    background-image: url(../img/s1b3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img2>:nth-child(2){
+    background-image: url(../img/s1b2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img2>:nth-child(3){
+    background-image: url(../img/s3b2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
