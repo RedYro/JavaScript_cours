@@ -17,6 +17,7 @@ body{
 /* *************************** Navbar Desktop *************************** */
 
 .navbar-desktop{
+    position: fixed;
     height: 8rem;
     line-height: 8rem;
     text-align: center;
@@ -25,6 +26,9 @@ body{
     align-items: center;
     font-weight: bolder;
     transition: all linear 300ms;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999999;
 }
 
 .navbar-desktop a{
@@ -111,22 +115,22 @@ body{
 }
 
 .container-fluid{
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #cbe6ff;
+    padding: 5rem;
     transition: all linear 300ms;
 }
 
 .banniere-title{
-    margin-bottom: 2rem;
+    margin: 2rem;
 }
 
 h1{
     font-weight: bolder;
-    margin-bottom: 7rem;
+    margin: 7rem;
 }
 
 /* Style pour container dark mode */
@@ -266,4 +270,112 @@ h1{
     background-color: #ffd363 !important;
     color: #2c3c54 !important; 
     transition: all linear 300ms !important;
+}
+
+/* Style loader */
+
+#loader{
+    position: fixed;
+    z-index: 100000;
+    background-color: #cbe6ff;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999999;
+}
+
+.icone-loader{
+    width: 100px;
+    height: 100px;
+    border: 10px solid #61b3ff;
+    border-top-color: #2c3c54;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+    animation-name: loader; /* Nom de l'animation */
+    animation-duration: 1s; /* Durée de l'animation */
+    animation-iteration-count: infinite; /* Répétition infinie de l'animation */
+    animation-timing-function: linear;
+}
+
+/* @keyframe permet de définir les étapes composant la séquence d'une animation CSS => passer par plusieurs états sur les éléments */
+/* loader => nom @keyframes */
+
+@keyframes loader{
+    /* 0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    } */
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* Class pour cacher le loader */
+
+.hide-loader{
+    display: none !important;
+}
+
+/* Style progress-barre */
+
+#progress{
+    position: fixed;
+    top: 80px;
+    height: 9px;
+    z-index: 999999;
+}
+
+.progress-color-light{
+    background-color: #2c3c54;
+    transition: all linear 300ms;
+}
+
+.progress-color-dark{
+    background-color: #fff;
+    transition: all linear 300ms;
+}
+
+/* Style Slider*/
+
+.slider{
+    margin-top: 5rem;
+    padding: 10rem;
+    background-image: url(../img/concrete_seamless.png);
+    transition: all linear 300ms;
+}
+
+.slider-dark-mode{
+    margin-top: 5rem;
+    padding: 10rem;
+    background-image: url(../img/Background_dark.jpg);
+    transition: all linear 300ms;
+}
+
+.tools > div{
+    border: 1px solid #333;
+    padding: 2rem;
+    background-color: #2c3c54;
+    color: #fff;
+}
+
+.tools> div:hover{
+    scale: 1.2;
+    transition: all linear 300ms;
+}
+
+.slider > div:nth-child(2){
+    width: 800px;
+    height: 500px;
+}
+
+.slider img{
+    margin-top: 5rem;
+    border: 20px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 16px 1px rgba(0, 0, 0, .75);
+    transform: rotate(-8deg);
 }

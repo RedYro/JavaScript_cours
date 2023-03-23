@@ -14,6 +14,11 @@
     <title>Projet JS</title>
 </head>
 <body>
+    <div id="loader" class="d-flex justify-content-center align-items-center">
+        <div class="icone-loader">
+
+        </div>
+    </div>
     <header>
         <nav class="navbar-desktop">
             <a href="#">Accueil</a>
@@ -26,6 +31,7 @@
                 <div class="btn"></div>
             </div>
         </nav>
+        <div id="progress" class="progress-color-light"></div>
         <nav class="navbar-mobile">
             <i class="bi bi-list"></i>
             <div class="navbar-mobile-menu">
@@ -56,11 +62,30 @@
                     <button class="btn-abonner">Abonnez-vous</button> 
                 </div>
                 <!-- Fermeture bloc-btn -->   
-           </div >
+            </div >
+            <div class="container">
+                <div class="slider d-flex flex-column justify-content-center align-items-center">
+                    <div class="tools d-flex mb-5">
+                        <div class="left" title="Image précédante">
+                            <i class="bi bi-skip-backward-fill"></i>
+                        </div>
+                        <div class="mid" title="Carousel automatique">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                        <div class="right" title="Image suivante">
+                            <i class="bi bi-skip-forward-fill"></i>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="assets/img/1.jpg" alt="img slider" class="col-12">
+                    </div>
+                </div>
+            </div>
         </div>
+        
     </main>
     <footer>
-
+        
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

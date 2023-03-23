@@ -79,11 +79,19 @@ switchBox.addEventListener(`click`, function changeMode(){
         btnChange.classList.add(`bi-moon-fill`);
         btnAbonne.classList.add(`btn-abonner-ter`);
         smiley.classList.add(`bi-emoji-neutral-bis`);
+        progressBarre.classList.remove(`progress-color-light`);
+        progressBarre.classList.add(`progress-color-dark`);
+        // slider.classList.remove(`slider`);
+        slider.classList.add(`slider-dark-mode`);
     } else{
         btnChange.classList.remove(`bi-moon-fill`);
         btnChange.classList.add(`bi-sun-fill`);
         btnAbonne.classList.remove(`btn-abonner-ter`);
         smiley.classList.remove(`bi-emoji-neutral-bis`);
+        progressBarre.classList.remove(`progress-color-dark`);
+        progressBarre.classList.add(`progress-color-light`);
+        slider.classList.remove(`slider-dark-mode`);
+        // slider.classList.add(`slider`);
     }
     // btn position 
     if (btn.classList.contains(`btn`)){
@@ -111,7 +119,6 @@ let navMobile = document.querySelector(`.navbar-mobile-menu`);
 let linksRespoonsive = document.querySelectorAll(`.navbar-mobile-list a`);
 let btnBis = document.querySelector(`.btn-bis`);
 let btnChangeResponsive = document.querySelector(`.switch-bis i`);
-
 
 switchBoxResponsive.addEventListener(`click`, function changeModeResponsive(){
     // div "switch"
@@ -151,5 +158,82 @@ switchBoxResponsive.addEventListener(`click`, function changeModeResponsive(){
     } else{
         btnBis.classList.remove(`btn-position-bis`);
         btnBis.classList.add(`btn-bis`);
+    }
+})
+
+// --------------------- Loader --------------------- //
+
+let loader = document.querySelector(`#loader`);
+
+// Méthode 1 //
+window.addEventListener(`load`, function loadingScreen(){
+    loader.classList.add(`hide-loader`);
+})
+
+// Méthode 2 //
+// window.onload = function () {
+//     loader.classList.add(`hide-loader`);
+// }
+
+// --------------------- Progress barre --------------------- //
+
+let body = document.querySelector(`body`);
+let progressBarre = document.querySelector(`#progress`);
+
+// Pour récupérer la hauteur de "body" (ou n'importe quel élément) //
+body.clientHeight;
+
+// Quantité du scroll parcouru en px //
+window.scrollY;
+
+// Pour obtenir le % scrollé sur le doc //
+window.scrollY / body.clientHeight;
+
+window.addEventListener(`scroll`, function(){
+    // Pour arriver à avoir 1 au plus bas de la page, on soustrait le % obtenu avec window.innerHeight
+    let pourcentageScroll = window.scrollY / (body.clientHeight - window.innerHeight);
+    let roundScroll = Math.round(pourcentageScroll*100);
+    progressBarre.style.width = `${roundScroll}%`;
+})
+
+// --------------------- Slider --------------------- //
+
+let slider = document.querySelector(`.slider`);
+let left = document.querySelector(`.left`);
+let mid = document.querySelector(`.mid i`);
+let right = document.querySelector(`.right`);
+let img = document.querySelector(`img`);
+
+let i = 12;
+left.addEventListener(`click`, previousSlide) 
+function previousSlide(){
+    i--;
+    img.setAttribute(`src`, `assets/img/` + i + `.jpg`);
+    if(i == 1){
+        i = 12;
+    }
+}
+
+let u = 1
+right.addEventListener(`click`, nextSlide);
+function nextSlide(){
+    u++;
+    img.setAttribute(`src`, `assets/img/` + u + `.jpg`);
+    if(u == 11){
+        u = 0;
+    }
+}
+
+let statut = null;
+mid.addEventListener(`click`, function autoSlider(){
+    if(mid.classList.contains(`bi-play-fill`) && statut == null){
+        mid.classList.remove(`bi-play-fill`);
+        mid.classList.add(`bi-pause-fill`);
+        statut = window.setInterval(nextSlide, 1500);
+    } else{
+        mid.classList.remove(`bi-pause-fill`);
+        mid.classList.add(`bi-play-fill`);
+        window.clearInterval(statut);
+        statut = null;
     }
 })

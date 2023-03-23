@@ -178,4 +178,9 @@
         transition: all linear 300ms !important;
     }
 
+    /* progress barre */
+    
+    #progress{
+        display: none;
+    }
 }
