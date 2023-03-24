@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,15 +13,30 @@
 <body>
     <div id="container">
         <header>
-            
+            <div class="title">
+                <h1>SUTOM</h1>
+                <div class="content">
+                    <input type="text" class="typing-text" maxlength="1">
+                    <div class="input">
+                        <input type="text" disabled>
+                    </div>
+                    <div class="details">
+                        <p class="hint">Indice : <span></span></p>
+                        <p class="guessleft">Essais restants : <span></span></p>
+                        <p class="wrong-letter">Mauvaises lettres : <span></span></p>
+                    </div>
+                    <button class="btn-reset">Recommencer la partie</button>
+                </div>
+            </div>
         </header>
         <main>
 
         </main>
         <footer>
-
+            
         </footer>
     </div>
+    <script src="assets/js/word.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

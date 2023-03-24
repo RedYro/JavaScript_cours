@@ -1,0 +1,60 @@
+/* Style HTML */
+
+html{
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style container */
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: gray;
+}
+
+/* Style header */
+
+.title{
+    width: 450px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.title .content{
+    margin: 3rem;
+}
+
+.content .input{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1.5rem;
+}
+
+.input input{
+    width: 50px;
+    height: 49px;
+    background: none;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.details p{
+    margin-bottom: 2rem;
+}
+
+.btn-reset{
+    width: 50%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+}
