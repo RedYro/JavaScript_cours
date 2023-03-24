@@ -1,0 +1,74 @@
+:root {
+    font-size: 62.5%;
+}
+body {
+    background-color: #191919;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header */
+header {
+    width: 100%;
+    background-color: #101010;
+    padding: 1rem 2rem;
+    border-bottom: .1rem solid rgba(255, 255, 255, .1);
+    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, .5);
+
+}
+
+header img {
+    width: 60px;
+}
+
+.actuel{
+    border-bottom: 2px solid #fff !important;
+}
+
+a.nav-link {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: grey;
+    margin-left: 4rem;
+    transition: all linear 0.2s;
+    /* all : la transition s'applique sur toutes les propriétés qui ont les valeurs changé   
+    linear : spécifie un effet de transition avec la même vitesse du début à la fin
+    un délai : (en secondes) pour l'effet de transition. */
+
+}
+
+a.nav-link:hover {
+    color: #fff;
+    /* scale permet de redimentionner un élément par rapport à sa taille d'iorigine */
+    scale: 1.2;
+}
+
+nav .navbar-toggler {
+    background-color: #fff;
+    font-size: medium;
+}
+
+
+/* footer */
+footer {
+    width: 100%;
+    /* background-color: #101010; */
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, .5);
+    padding: 40px;
+    font-size: 1.6rem;
+}
+
+footer ul:nth-child(2) {
+    border-left: 1px solid rgba(255, 255, 255, .2);
+    border-right: 1px solid rgba(255, 255, 255, .2);
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer ul li {
+    margin: 10px 0;
+}

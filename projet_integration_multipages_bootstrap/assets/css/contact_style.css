@@ -1,0 +1,107 @@
+section{
+    font-size:1.5rem;
+}
+ 
+section > div {
+    width: 100%;
+}
+
+section:first-child > div {
+    background-image: url(../img/s1b3.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+}
+
+section:first-child > div > h1 {
+    font-size: 8rem;
+    margin-bottom: 40px;
+    line-height: 1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+section:first-child > div > p {
+    padding: 0 100px;
+    text-align: justify;
+    line-height: 2em;    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+section:last-child {
+    background-color: #141414;
+}
+
+section:last-child > div > form {
+    padding: 40px;
+    background-color: #010101;
+}
+
+section:last-child > div > form label {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    border-bottom: 3px solid #191919;
+    margin-bottom: 30px;
+}
+
+section:last-child > div > form label input, section:last-child > div > form label textarea {
+    width: 100%;
+    resize: none;
+    background-color: transparent !important;
+    border: unset;
+    font-size: 1.6rem;
+    font-family: inherit;
+    outline: none;
+    margin-top: 10px;
+    padding:5px;
+    color: inherit;
+}
+
+section:last-child > div > form label textarea {
+    height:200px;
+}
+
+.form-btns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.form-btns button {
+    background-color: #3C3C3C;
+    color: #fff;
+    cursor: pointer;
+    padding: 1rem 0;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1em;
+    transition: all linear 0.2s;
+}
+
+.form-btns button:hover {
+    background-color: #191919;
+}
+
+.error{
+    color: red !important;
+}
+
+#info{
+    color: #fff;
+    margin: 2rem auto;
+    border-radius: 5px;
+    text-align: center;
+    width: 30%;
+}
+
+#info p{
+    margin: 0;
+    font-size: 2rem;
+}
