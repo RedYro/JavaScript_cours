@@ -1,19 +1,19 @@
 // // --------------------------
     // 04 STRING
 // // --------------------------
-document.write(`<h1> STRING </h1>`);
+// document.write(`<h1> STRING </h1>`);
 
 const PRENOM = `Grégory`;
 const NOM = `Lyfoung`;
-document.write(PRENOM + ` ` + NOM + `<br>`);
+// document.write(PRENOM + ` ` + NOM + `<br>`);
 const PRENOM2 = `Thao`, NOM2 = `Lau`;
-document.write(PRENOM2 + ` ` + NOM2 + `<br>`);
+// document.write(PRENOM2 + ` ` + NOM2 + `<br>`);
 
 let a = 10;
 let b = 5; 
 let c = `5`;
-document.write(a + b + `<br>`);
-document.write(a + ` ` + c + `<br>`);
+// document.write(a + b + `<br>`);
+// document.write(a + ` ` + c + `<br>`);
 
 // Exercice //
 // Réaliser un prompt demandant l'âge de l'utilisateur, récupérer cette donnée et l'utiliser pour afficher :
