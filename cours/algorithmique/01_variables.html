@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="stylesheet" href="css/common_style.css">
+    <link rel="stylesheet" href="css/01_variables.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +11,56 @@
     <title>Introduction JavaScript : Variables</title>
 </head>
 <body>
-    <!-- D.O.M. = Document Object Model -->
+    <div id="container">
+        <header>
+            <nav>
+                <ul>
+                    <a href="http://127.0.0.1:5502/cours/algorithmique/01_variables.html">Variables</a> 
+                    <a href="http://127.0.0.1:5502/cours/algorithmique/02_types_.html">Types</a>   
+                    <a href="#">Nombres</a> 
+                    <a href="#">String</a>  
+                    <a href="#">Tableaux</a>    
+                    <a href="#">Conditions</a>  
+                    <a href="#">Boucles</a> 
+                    <a href="#">Fonctions</a>   
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="section1">
+                <div>
+                    <h1>Variables JavaScript</h1>
+                </div>
+                <div>
+                    <!-- D.O.M. = Document Object Model -->
+                    <p>Les variables en JavaScript sont comme des boîtes, on peut y stocker ce que l'on souhaite.</p>
+                    <p>L'initialisation d'une variable se fait en déclarant un nom (que l'on choisit)</p>
+                </div>
+                <div>
+                    <h3>Déclaration de variables</h3>
+                    <ul>
+                        <li><span>const</span> : permet de créer une constante accessible uniquement en lecture. Sa valeur ne peut être modifié par des réaffectations ultérieures, une constante ne peut être déclarée à nouveau.</li>
+                        <li><span>let</span> (anciennement "<span>var</span>") : sa valeur peut être changée contrairement aux constantes.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Exemples</h3>
+                    <ul>
+                        <li>Déclaration d'une variable avec <span>const</span> : <code>const TEST = `Hello World !`;</code></li>
+                        <li>Déclaration d'une variable avec <span>let</span> : <code>let test1 = `Bye !`;</code></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <!-- Utilisation direct du script en HTML -->
+        <!-- <script> </script> -->
 
+        <!-- Utilisation doc externe HTML --> 
+        <footer>
 
-    <!-- Utilisation direct du script en HTML -->
-    <!-- <script> </script> -->
-
-    <!-- Utilisation doc externe HTML -->
+        </footer>
+    </div>
+    
     <script src="01_variables.js"></script>
 
 </body>

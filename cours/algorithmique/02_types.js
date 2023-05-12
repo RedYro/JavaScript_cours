@@ -1,7 +1,7 @@
 // // --------------------------
     // 02 DIFFÉRENTS TYPES DE VALEURS
 // // --------------------------
-document.write(`<h1> DIFFÉRENTS TYPES DE VALEURS </h1>`);
+// document.write(`<h1> DIFFÉRENTS TYPES DE VALEURS </h1>`);
 
 /* 
 Il existe plusieurs types de valeurs, que l'on peut assigner à nos variables
@@ -37,11 +37,11 @@ let monTexte3 = `Voici une phrase écrite aujourd'hui`;
 
 // const BIENVENUE = `Aujourd'hui c'est l'arrivée de Grégory`;
 let bienvenue = `Aujourd'hui c'est l'arrivée de Grégory`;
-document.write(bienvenue)
+// document.write(bienvenue)
 const PRENOM = `Grégory`; 
 bienvenue = `<br>` + `Aujourd'hui c'est l'arrivée de ${PRENOM}` + `<br>`;
 // bienvenue = bienvenue + ` ` + PRENOM + `<br>`; 
-document.write(bienvenue)
+// document.write(bienvenue)
 
 // Number //
 
@@ -64,10 +64,10 @@ console.log(typeof(chiffre));
 
 // "document.write()" => permet d'afficher sur une page le contenu d'une variable
 
-document.write(monTexte);
-document.write(`<br>`);
-document.write(`<br>`);
-document.write(chiffre);
+// document.write(monTexte);
+// document.write(`<br>`);
+// document.write(`<br>`);
+// document.write(chiffre);
 
 // Boîte de dialogue // (non-considérée comme un type)
 

@@ -1,0 +1,36 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none !important;
+    box-sizing: border-box;
+}
+
+body{
+    color: black;
+    background-color: rgb(255, 202, 40);
+}
+
+#container{
+    width: 100%;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+header nav a{
+    padding: 2rem;
+    color: rgb(255, 202, 40);
+    font-weight: bold;
+}
+
+span{
+   font-weight: bolder;
+}
+
+code{
+    color: crimson;
+    font-weight: 800;
+}

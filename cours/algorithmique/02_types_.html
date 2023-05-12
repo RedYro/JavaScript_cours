@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="stylesheet" href="css/common_style.css">
+    <link rel="stylesheet" href="css/02_types.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +11,72 @@
     <title>Introduction JavaScript : Types</title>
 </head>
 <body>
+    <div id="container">
+        <header>
+            <nav>
+                <ul>
+                    <a href="http://127.0.0.1:5502/cours/algorithmique/01_variables.html">Variables</a> 
+                    <a href="http://127.0.0.1:5502/cours/algorithmique/02_types_.html">Types</a>   
+                    <a href="#">Nombres</a> 
+                    <a href="#">String</a>  
+                    <a href="#">Tableaux</a>    
+                    <a href="#">Conditions</a>  
+                    <a href="#">Boucles</a> 
+                    <a href="#">Fonctions</a>   
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="section1">
+                <div>
+                    <h1>Types de valeurs en JavaScript</h1>
+                </div>
+                <div>
+                    <p>Il existe plusieurs types de valeurs, que l'on peut assigner à nos variables :</p>
+                </div>
+                <div>
+                    <h3>Types :</h3>
+                    <ul>
+                        <li>chaînes de caractères (string) => phrase, entre ('') ("") (``)</li>
+                        <li>nombres => 5, 10, 12.8</li>
+                        <li>boolean => "true" ou "false"</li>
+                        <li>array (tableau) => ["Julien", 10]</li>
+                        <li>null</li>
+                        <li>class</li>
+                        <li>objets</li>
+                        <li>function</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Les différentes manières d'initialiser une chaîne de caractères</h3>
+                    <ul>
+                        <li>("") double quotes : <code>let variable = "test";</code></li>
+                        <li>('') simple quotes : <code>let variable2 = 'test2';</code></li>
+                        <li>(``) back quotes : <code>let variable3 = `test3`;</code></li>
+                    </ul>
+                </div>
+                <div>
+                    <p>En JavaScript, la convention de nommage est le CamelCase; chaque nouveau mot de notre variable doit être en majuscule.</p>
+                    <h3>Exemples :</h3>
+                    <ul>
+                        <li><code>let monTexte = "Voici une phrase écrite entre double quote"</code></li>
+                        <li><code>let monTexte2 = 'Voici une phrase écrite dans une simple quote aujourd\'hui';</code></li>
+                        <li><code>let monTexte3 = `Voici une phrase écrite aujourd'hui`;</code></li>
+                        <li><code>let bienvenue = `Aujourd'hui c'est l'arrivée de Grégory`;</code></li>
+                        <li><code>const PRENOM = `Grégory`;</code></li>
+                        <li><code>bienvenue = `Aujourd'hui c'est l'arrivée de ${PRENOM}`;</code></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <!-- Utilisation direct du script en HTML -->
+        <!-- <script> </script> -->
 
+        <!-- Utilisation doc externe HTML --> 
+        <footer>
 
-
-    
+        </footer>
+    </div>
     <script src="02_types.js"></script>
 </body>
 </html>
