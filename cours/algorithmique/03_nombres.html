@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="stylesheet" href="css/common_style.css">
+    <link rel="stylesheet" href="css/03_nombres.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +11,63 @@
     <title>Introduction JavaScript : Nombres</title>
 </head>
 <body>
+    <div id="container">
+        <header>
+            <nav>
+                <ul>
+                    <a href="http://127.0.0.1:5502/cours/algorithmique/01_variables.html">Variables</a> 
+                    <a href="http://127.0.0.1:5502/cours/algorithmique/02_types_.html">Types</a>   
+                    <a href="http://127.0.0.1:5502/cours/algorithmique/03_nombres.html">Nombres</a> 
+                    <a href="#">String</a>  
+                    <a href="#">Tableaux</a>    
+                    <a href="#">Conditions</a>  
+                    <a href="#">Boucles</a> 
+                    <a href="#">Fonctions</a>   
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="section1">
+                <div>
+                    <h1>Nombres en JavaScript</h1>
+                </div>
+                <div>
+                    <p>En JavaScript on peut effectuer tout type de calcul.</p>
+                </div>
+                <div>
+                    <h3>Exemples :</h3>
+                    <ul>
+                        <p>Addition :</p>
+                        <li><code>let addition = 10 + 5;</code></li>
+                        <p>Soustraire :</p>
+                        <li><code>let soustraction = 16 - 4;</code></li>
+                        <p>Multiplication :</p>
+                        <li><code>let multiplication = 5 * 4;</code></li>
+                        <p>Division :</p>
+                        <li><code>let division = 20 / 4;</code></li>
+                        <p>Modulo :</p>
+                        <li><code>let modulo = 10 % 3;</code></li>
+                        <p>x², x^n (nombre au carré) :</p>
+                        <li><code>let valeurAuCarree = valeur ** 2;</code></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Raccourcis, incrémentation et décrémentation</h3>
+                    <ul>
+                        <p>Il existe des raccourcis en JavaScript pour faire des calculs tel que :</p>
+                        <li><code>let g = 10; <br> g+= 5;</code> (équivaut à "<code>g = 10 + 5</code>" soit "<code>g = 15</code>")</li>
+                        <p>L'incrémentation permet d'ajouter 1 à une variable contenant un nombre, exemple :</p>
+                        <li><code>let h = 50; <br> h++; <br></code> (équivaut à "<code>h = 50 + 1;</code>" soit "<code>h = 51;</code>")</li>
+                        <p>La décrémentation fait l'inverse, elle soustrait 1, exemple :</p>
+                        <li><code>let i = 50;</code> <br> <code>i--;</code> (équivaut à "<code>i = 50 - 1;</code>" soit "<code>i = 49;</code>")</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer>
 
-
-
-    
+        </footer>
+    </div>
     <script src="03_nombres.js"></script>
 </body>
 </html>
