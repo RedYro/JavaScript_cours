@@ -178,6 +178,7 @@
                 </div>
                 <div>
                     <h2>Array en JavaScript</h2>
+                    <h3>Tableaux indexés</h3>
                 </div>
                 <div class="array-js">
                     <ul>
@@ -189,13 +190,132 @@
                         <p>Ces 2 tableaux peuvent contenir plusieurs informations</p>
                         <p>Affectation de valeurs dans les tableaux :</p>
                         <p><span>Méthode 1 :</span></p>
-                        <li><code>let colors= [`Red`, `Blue`, `Purple`, `Green`];</code></li>
+                        <li><code>let colors = [`Red`, `Blue`, `Purple`, `Green`];</code></li>
                         <p><span>Méthode 2 :</span></p>
                         <li><code>myArray[0] = `Yro`; <br> myArray[1] = `Hada`; <br> myArray[2] = `Lya`; <br> myArray[3] = `Yato`;</code></li>
                         <p>Création de 2 tableaux indexés :</p>
                         <li><code>let annuaire = [colors, myArray];</code></li>
                         <p>Exercice :</p>
-                        <li><code></code></li>
+                        <li><code>
+                            let ulArrayCours = document.querySelector(`.array-js > ul`); <br> <br>
+                            for (let i = 0; i < annuaire[0].length && i <= annuaire[1].length; i++){ <br>
+                                let liArrayCours = document.createElement(`li`); <br>
+                                liArrayCours.innerText = `${annuaire[0][i]} ${annuaire[1][i]}`; <br>
+                                ulArrayCours.appendChild(liArrayCours); <br>
+                            };
+                        </code></li>
+                        <p>Correction :</p>
+                    </ul>
+                    <h3>Tableaux multidimensionnels indexés</h3>
+                    <ul>
+                        <p>Exemple :</p>
+                        <li><code>
+                            let tableau =[ <br>
+                            [ <br>
+                            `prenom`,`nom`,`tel` <br>
+                            ], <br>
+                            [ <br>
+                            `Thao`,`Lau`,`065821245` <br>
+                            ], <br>
+                            ]; <br>
+                        </code></li>
+                        <p>Exercice :</p>
+                        <li><code>
+                            let ulArrayCoursBis = document.querySelector(`.array-js > :nth-child(3)`); <br>
+                            let liArrayCoursBis = document.createElement(`li`); <br>
+                            liArrayCoursBis.innerText = `${arrayMultiDimensional[0][1]} <br> ${arrayMultiDimensional[1][1]}, <br> ${arrayMultiDimensional[0][0]} <br> ${arrayMultiDimensional[1][0]}, <br> ${arrayMultiDimensional[0][2]} <br> ${arrayMultiDimensional[1][2]}`; <br>
+                            ulArrayCoursBis.appendChild(liArrayCoursBis);
+                        </code></li>
+                        <p>Correction :</p>
+                    </ul>
+                    <h3>Tableaux non indexés</h3>
+                    <ul>
+                        <p>Exemple :</p>
+                        <li><code>
+                            let coordonnee = { <br>
+                            prenom : `Grégory`, <br>
+                            nom : `Lyfoung`, <br>
+                            age : 21, <br>
+                            tel : 202020202, <br>
+                        };
+                        </code></li>
+                    </ul>
+                    <h3>Tableaux non indexés multidimensionnels</h3>
+                    <ul>
+                        <p>Exemples :</p>
+                        <p>Tableau à 2 dimensions</p>
+                        <li><code>
+                            let contact = [ <br>
+                                {prenom:`Linda`, nom:`Bentouil`, tel:`1010101010`}, <br>
+                                {prenom:`Maryam`, nom:`Cisse`, tel:`1010101010`}, <br>
+                                {prenom:`Rayen`, nom:`Daly`, tel:`1010101010`}, <br>
+                            ];
+                        </code></li>
+                        <li>Exemples d'affichages du contenu d'un tableau à 2 dimensions : </li>
+                        <p>Pour afficher seulement le nom :</p>
+                        <li><code>console.log(contact[1][`nom`]);</code></li>
+                        <p>Pour afficher seulement le prénom :</p>
+                        <li><code>console.log(contact[2][`prenom`]);</code></li>
+                        <p>Tableau à 4 dimensions</p>
+                        <li><code>
+                            let array4Dimensions = [ <br>
+                                { <br>
+                                    prenom: `Hugo`, <br>
+                                    nom: `Liegeard`, <br>
+                                    coordonnees: { <br>
+                                        email: `hugo.liegeard@mail.fr`, <br>
+                                        tel: { 
+                                            fixe: 1212121212, <br>
+                                            fax: 2323232323, <br>
+                                            port: { <br>
+                                                prive:4545454545, <br>
+                                                pro: 5656565656, <br>
+                                            }
+                                        }, <br>
+                                        adresse: { <br>
+                                            ville: `Évry`, <br>
+                                            cp: 91000, <br>
+                                            pays: { <br>
+                                                code: `FR`, <br>
+                                                nom: `France`, 
+                                            } 
+                                        }, 
+                                    } 
+                                } <br>
+                            ];
+                        </code></li>
+                        <p>Exemples d'affichages du contenu d'un tableau à 4 dimensions :</p>
+                        <p>Pour afficher seulement l'email :</p>
+                        <li><code>console.log(array4Dimensions[0][`coordonnees`][`email`])</code></li>
+                        <p>Pour afficher le "code" du pays :</p>
+                        <li><code>console.log(array4Dimensions[0][`coordonnees`][`adresse`][`pays`][`code`]);</code></li>
+                    </ul>
+                    <h3>Propriétés et méthodes des tableaux</h3>
+                    <ul>
+                        <li>"<span>length</span>": permet de connaître le nombre d'éléments dans un tableau</li>
+                        <p>Exemple :</p>
+                        <li><code>console.log(colors.length);</code> => Affiche "4" (4 éléments)</li>
+                    </ul>
+                    <ul>
+                        <li>"<span>push</span>" : permet d'ajouter un élément à la fin d'un tableau</li>
+                        <p>Exemple :</p>
+                        <li><code>
+                            colors.push(`Purple`); <br>
+                            console.log(colors);
+                        </code> => Affiche le tableau avec la nouvelle valeur insérer à la fin "[`Red`,`Blue`,`Red`,`Blue`,`Purple`]"</li>
+                    </ul>
+                    <ul>
+                        <li>"<span>pop</span>" : permet de supprimer le dernier élément d'un tableau</li>
+                        <p>Exemple :</p>
+                        <li><code>colors.pop(); <br> console.log(colors);</code> => Affiche le tableau sans la dernière valeur insérer précedemment avec "push()" "[`Red`,`Blue`,`Red`,`Blue`]"</li>
+                    </ul>
+                    <ul>
+                        <li>"<span>unshift</span>" : permet d'ajouter un ou des éléments au début du tableau</li>
+                        <p>Exemple :</p>
+                        <li><code>colors.unshift(`White`,`Black`); <br> console.log(colors);</code> Affiche le tableau avec les 2 nouvelles valeurs insérer au début "[`White`,`Black`,`Red`,`Blue`,`Red`,`Blue`]"</li>
+                    </ul>
+                    <ul>
+                        <li>"<span>splice</span>" : permet d'ajouter, supprimer ou remplacer des éléments n'importe où dans un tableau</li>
                     </ul>
                 </div>
             </section>
