@@ -316,6 +316,21 @@
                     </ul>
                     <ul>
                         <li>"<span>splice</span>" : permet d'ajouter, supprimer ou remplacer des éléments n'importe où dans un tableau</li>
+                        <p>"<span>splice</span>" prend 3 arguments :</p>
+                        <li>position de départ : à partir d'où commence le changement</li>
+                        <li>nombre d'éléments à remplacer ou enlever</li>
+                        <li>élément(s) à ajouter au tableau</li>
+                        <p>Exemple :</p>
+                        <li><code>colors.splice(1, 0, `Brown`, `Orange`); <br> console.log(colors);</code> Affiche "[`White`,`Brown`,`Orange`,`Black`,`Red`,`Blue`,`Red`,`Blue`]"</li>
+                        <li><code>color.splice(2, 1, `Pink`); <br> console.log(colors);</code> Affiche "[`White`,`Brown`,`Pink`,`Black`,`Red`,`Blue`,`Red`,`Blue`]"</li>
+                    </ul>
+                    <ul>
+                        <li>"<span>slice</span>" : permet de découper un tableau et d'en créer un autre</li>
+                        <p>Exemple :</p>
+                        <li><code>let joursSemaines = [`Lundi`,`Mardi`,`Mercredi`,`Jeudi`,`Vendredi`,`Samedi`,`Dimanche`]; <br> let joursTravail = joursSemaine.slice(0, 5); <br> console.log(joursTravail);</code> Affiche "[`Lundi`,`Mardi`,`Mercredi`,`Jeudi`,`Vendredi`]" <br> <code>let joursRepos = joursSemaine.slice(5, 7); <br> console.log(joursRepos);</code> Affiche "[`Samedi`,`Dimanche`]"</li>
+                    </ul>
+                    <ul>
+                        <li>"<span>join</span>" : permet de choisir un séparateur entre les éléments d'un tableau en concaténant les différentes valeurs de celui-ci</li>
                     </ul>
                 </div>
             </section>
