@@ -6,4 +6,4 @@ myArray[2] = `Lya`;
 myArray[3] = `Yato`;
 let annuaire = [colors, myArray];
 let ulArrayCours = document.querySelector(`.array-js > ul`);
-console.log(divArrayCours);
+console.log(ulArrayCours);
