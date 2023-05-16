@@ -236,4 +236,5 @@ console.log(verif);
 // Pour fusionner différents tableaux entre eux pour en créer un nouveau, on utilise la méthode "concat()" //
 let totalTableau = languages.concat(color, monTableau, array4Dimensions);
 console.log(totalTableau);
+// document.write(`<br> ${totalTableau}`);
 // document.write(`<br>` + totalTableau);

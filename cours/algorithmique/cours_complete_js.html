@@ -331,6 +331,119 @@
                     </ul>
                     <ul>
                         <li>"<span>join</span>" : permet de choisir un séparateur entre les éléments d'un tableau en concaténant les différentes valeurs de celui-ci</li>
+                        <p>Exemple :</p>
+                        <li><code>let concatColors = colors.join(` - `); <br> console.log(colors);</code> Affiche "White - Brown - Pink - Black - Red - Blue - Red - Blue" avec un <code>document.write()</code> par exemple</li>
+                    </ul>
+                    <ul>
+                        <li>"<span>includes</span>" : permet de déterminer si un tableau contient une valeur précise, à noter quelle est sensible à la casse c'est-à-dire que la méthode vérifiera par exemple l'écriture d'une chaîne de caractères, si on écrit "html" au lieu de "HTML" celle-ci renverra "false" (méthode qui renvoie un résultat "boolean")</li>
+                        <p>Exemple :</p>
+                        <li><code>let technologies = [`HTML`,`CSS`,`JS`]; <br> let verif = technologies.includes(`CSS`);</code> Affiche "true" car le tableau contient bien la "CSS"</li>
+                    </ul>
+                    <ul>
+                        <li>"<span>concat</span>" : permet de fusionner différents tableaux entre eux afin d'en créer un nouveau</li>
+                        <p>Exemple :</p>
+                        <li><code>let totalTableaux = technologies.concat(colors, myArray, array4Dimensions); <br> console.log(totalTableaux);</code> Affichera toutes les valeurs des précédent tableaux dans un seul tableau</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Conditions en JS</h2>
+                    <h3>Opérateurs logiques</h3>
+                </div>
+                <div>
+                    <h3>Opérateurs de comparaison pour structure traditionnelle</h3>
+                    <ul>
+                        <li>"<code>></code>" : strictement supérieur</li>
+                        <li>"<code><</code>" : stritement inférieur</li>
+                        <li>"<code>>=</code>" : supérieur ou égal</li>
+                        <li>"<code><=</code>" : inférieur ou égal</li>
+                        <li>"<code>==</code>" : comparaison de valeur, vérifie si 2 valeurs de 2 variables sont identiques</li>
+                        <li>"<code>===</code>" : comparaison de valeur ET de type // signifie "STRICTEMENT ÉGAL À" // vérifie la valeur et le type (string, number, etc.)</li>
+                        <li>"<code>!=</code>" : différent "de" en valeur</li>
+                        <li>"<code>!==</code>" : strictement différent de (valeur et type)</li>
+                    </ul>
+                    <ul>
+                        <p>Exemples :</p>
+                        <li><code>let nb1 = 1; <br> let nb2 = 2; <br> console.log(nb1 > nb2);</code> Affiche "false"</li>
+                        <li><code>console.log(nb1 < nb2);</code> Affiche "true"</li>
+                        <li><code>console.log(nb1 >= nb2);</code> Affiche "false"</li>
+                        <li><code>console.log(nb1 <= nb2);</code> Affiche "true"</li>
+                        <li><code>let nb3 = 3; <br> let nb3Bis = `3`; <br> console.log(nb3 == nb3Bis);</code> Affiche "true" car les 2 variables possèdent toutes deux la même valeur</li>
+                        <li><code>console.log(nb3 === nb3Bis);</code> Affiche "false" car même si les 2 variables ont la même valeur, elles ne possèdent pas le même type (nb3 = int ; nb3Bis = string)</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <h3>Opérateurs logiques <span>"&&"</span> <span>"||" </span> <span>"!"</span></h3>
+                        <li>"<span>&&</span>" = AND : permet d'évaluer une comparaison entre des variables et de renvoyer le résultat en "boolean" (true ou false), si toutes les expressions sont testées "true" alors on aura comme résultat "true" et si une des expressions est testée "false" le résultat sera "false"</li>
+                        <li>"<span>||</span>" = OR : permet d'évaluer une comparaison de variables, si 1 ou 2 expressions sont "true" alors le résultat sera "true", si 2 expressions sont "false" alors le résultat sera "false"</li>
+                        <li>"<span>!</span>" = NOT : permet de transformer "true" en "false" et vice-versa</li>
+                    </ul>
+                    <ul>
+                        <p>Exemples :</p>
+                        <p>Opérateur <span>&&</span> :</p>
+                        <li><code>true && true;</code> Affiche "true"</li>
+                        <li><code>true && false;</code> Affiche "false"</li>
+                        <li><code>false && true;</code> Affiche "false"</li>
+                        <li><code>false && false;</code> Affiche "false"</li>
+                        <p>Opérateur <span>||</span> :</p>
+                        <li><code>false || false;</code> Affiche "false"</li>
+                        <li><code>true || false;</code> Affiche "true"</li>
+                        <li><code>true || true;</code> Affiche "true"</li>
+                        <li><code>false || true;</code> Affiche "true"</li>
+                        <p>Opérateur <span>!</span> :</p>
+                        <li><code>!true;</code> Affiche "false"</li>
+                        <li><code>!false;</code> Affiche "true"</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Structure conditionnelle <span>if()</span> <span>else</span> <span>else if()</span></h2>
+                </div>
+                <div>
+                    <ul>
+                        <p>Exemples :</p>
+                        <li><code>
+                            let a = 10, b = 5, c = 2; <br>
+                            if(a > b){ // si a > b => "true" alors le code dans le "if" s'exécute<br>
+                                console.log("a" est supérieur à "b"); <br>
+                            } else{ // sinon si "false" le code dans le "else" s'exécutera <br>
+                                console.log("a" est inférieur à "b"); <br>
+                            }
+                        </code></li>
+                        <p><span>if</span> avec <span>&&</span></p>
+                        <li><code>
+                            if((a > b) && (b > c)){ // si a > b et b > c => "true"  alors le code dans le "if" s'exécute<br>
+                                console.log("a" est supérieur à "b"); <br>
+                            } else{ // sinon si une des conditions du if est "false" le code dans le "else" s'exécutera <br>
+                                console.log("a" est inférieur à "b"); <br>
+                            }
+                        </code></li>
+                        <p><span>if</span> avec <span>||</span></p>
+                        <li><code>
+                            if((a > b) || (b > c)){ // si a > b ou b > c => "true"  alors le code dans le "if" s'exécute<br>
+                                console.log("a" est supérieur à "b"); <br>
+                            } else{ // sinon si les 2 conditions du if sont "false" le code dans le "else" s'exécutera <br>
+                                console.log("a" est inférieur à "b"); <br>
+                            }
+                        </code></li>
+                        <p><span>if</span> <span>else if</span> <span>else</span></p>
+                        <li><code>
+                            if(a == 8){ // false <br>
+                                console.log("a" est égal à 8); <br>
+                            } else if(a != 10){ // false <br>
+                                console.log("a" est différent de 10); <br>
+                            } else{ // true <br>
+                                console.log("a" est égal à 10); <br>
+                            }
+                        </code></li>
+                        <li><code>
+                            if(a == 10){ // true <br>
+                                console.log("a" est égal à 10); <br>
+                            } else if(a > b){ // true <br>
+                                console.log("a" est supérieur à "b"); <br>
+                            } else{ // <br>
+                                console.log("a" est "false"); <br>
+                            }
+                        </code></li>
                     </ul>
                 </div>
             </section>
