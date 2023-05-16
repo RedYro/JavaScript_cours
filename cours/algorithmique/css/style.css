@@ -58,6 +58,26 @@ code{
 h2{
     background-color: black;
     color: rgb(255, 202, 40);
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 15px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.footer img{
+    width: 30px;
+    padding: 0;
+    margin: 0;
+    transition: linear 0.5s;
+}
+
+.footer img:hover{
+    scale: 1.;
 }
