@@ -17,19 +17,19 @@
             <div class="navbar">
                 <nav>
                     <ul>
-                        <a href="http://127.0.0.1:5502/cours/algorithmique/01_variables.html">Variables</a> 
-                        <a href="http://127.0.0.1:5502/cours/algorithmique/02_types_.html">Types</a>   
-                        <a href="http://127.0.0.1:5502/cours/algorithmique/03_nombres.html">Nombres</a> 
-                        <a href="http://127.0.0.1:5502/cours/algorithmique/04_string.html">String</a>  
-                        <a href="#">Tableaux</a>    
-                        <a href="#">Conditions</a>  
+                        <a href="#variablesJS">Variables</a> 
+                        <a href="#typesJS">Types</a>   
+                        <a href="#nombresJS">Nombres</a> 
+                        <a href="#stringJS">String</a>  
+                        <a href="#arrayJS">Tableaux</a>    
+                        <a href="#conditionsJS">Conditions</a>  
                         <a href="#">Boucles</a> 
                         <a href="#">Fonctions</a>   
                     </ul>
                 </nav>
             </div>
         </header>
-        <main>
+        <main id="variablesJS">
             <section id="section1">
                 <div>
                     <h2>Variables JavaScript</h2>
@@ -46,7 +46,7 @@
                         <li><span>let</span> (anciennement "<span>var</span>") : sa valeur peut être changée contrairement aux constantes.</li>
                     </ul>
                 </div>
-                <div class="section1-part-3">
+                <div class="section1-part-3" id="typesJS">
                     <h3>Exemples</h3>
                     <ul>
                         <li>Déclaration d'une variable avec <span>const</span> : <code>const TEST = `Hello World !`;</code></li>
@@ -106,6 +106,7 @@
                         <li><code>let choix2 = false;</code></li>
                     </ul>
                     <h3>Boîtes de dialogues (non-considéreés comme des types)</h3>
+                    <p id="nombresJS"></p>
                     <ul>
                         <p><span>alert()</span> permet d'afficher un message d'alerte, exemple :</p>
                         <li><code>alert(`Ceci est un message d'alerte !`);</code></li>
@@ -140,6 +141,7 @@
                 </div>
                 <div>
                     <h3>Raccourcis, incrémentation et décrémentation</h3>
+                    <p id="stringJS"></p>
                     <ul>
                         <p>Il existe des raccourcis en JavaScript pour faire des calculs tels que :</p>
                         <li><code>let g = 10; <br> g+= 5;</code> (équivaut à "<code>g = 10 + 5</code>" soit "<code>g = 15</code>")</li>
@@ -171,6 +173,7 @@
                 </div>
                 <div>
                     <h3>Exercice</h3>
+                    <p id="arrayJS"></p>
                     <p>Réaliser un prompt demandant l'âge de l'utilisateur, récupérer cette donnée et l'utiliser pour afficher : <br> -"Vous avez X ans."</p>
                     <ul>
                         <li><code>let age = prompt(`Indiquez votre âge.`);</code> <br> <code>alert(`Vous avez {$age} ans !`);</code></li>
@@ -339,6 +342,7 @@
                         <p>Exemple :</p>
                         <li><code>let technologies = [`HTML`,`CSS`,`JS`]; <br> let verif = technologies.includes(`CSS`);</code> Affiche "true" car le tableau contient bien la "CSS"</li>
                     </ul>
+                    <p id="conditionsJS"></p>
                     <ul>
                         <li>"<span>concat</span>" : permet de fusionner différents tableaux entre eux afin d'en créer un nouveau</li>
                         <p>Exemple :</p>
