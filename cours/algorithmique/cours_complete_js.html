@@ -449,6 +449,107 @@
                             }
                         </code></li>
                     </ul>
+                    <ul>
+                        <h3>Condition ternaire</h3>
+                        <p>La condition ternaire nous permet de faire une vérification mais seulement sur une ligne</p>
+                        <p>Exemple :</p>
+                        <li><code>let meteo = `pluie`; <br> console.log((meteo == `pluie`) ? `Prenez un parapluie` : `Rangez le parapluie`);</code> Affiche "Prenez un parapluie"</li>
+                        <li><span>?</span> => if</li>
+                        <li><span>:</span> => else</li>
+                    </ul>
+                    <ul>
+                        <h3>Condition switch</h3>
+                        <p>La condition switch répond à des cas bien spécifiques, on doit écrire chaque condition à l'intérieur d'un "<span>case</span>" et sortir de celui-ci avec un "<span>break</span>" (stop la condition)</p>
+                        <p>Exemple :</p>
+                        <li><code>
+                            let valeur = 5 + 3; <br> 
+                            switch(valeur){ <br>
+                                case 5 : <br>
+                                console.log(`La valeur est égale à 5`); <br>
+                                break; <br>
+                                case 8 : <br>
+                                console.log(`La valeur est égale à 8`); <br>
+                                break; <br>
+                                case 12 : <br>
+                                console.log(`La valeur est égale à 12`); <br>
+                                break; <br>
+                                default : <br>
+                                console.log(`La valeur est indéterminée`); <br>
+                                break; <br>
+                            };
+                        </code> Affiche le code dans le "case 8" car la valeur de la variable "valeur" est égale à 8</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Boucles en JavaScript</h2>
+                </div>
+                <div>
+                    <ul>
+                        <h3>Boucle : "<span>FOR</span>"</h3>
+                        <p><span>for</span> prend 3 arguments :</p>
+                        <li>initialisation</li>
+                        <li>condition de continuation</li>
+                        <li>incrémentation</li>
+                        <p>Syntaxe :</p>
+                        <li><code>
+                            for(initialisation; condition de continuation; incrémentation){ <br>
+                                // Code à exécuter <br>
+                            };
+                        </code></li>
+                        <p>Exemple 1 :</p>
+                        <li><code>
+                            for(let i = 0; i <= 10; i++){ <br>
+                                console.log(`Instruction exécutée : ${i}`); <br>
+                            };
+                        </code> Affiche 10 fois "Instruction executée : 1" etc jusqu'à 10 car i <= 10</li>
+                        <li>"i = 0" => initialisation du départ de la boucle à 0</li>
+                        <li>"i <= 10" => tant que la valeur de i est inférieure ou égale à 10</li>
+                        <li>"i++" => incrémentation d'un tour dans la boucle</li>
+                        <p>Exemple 2 :</p>
+                        <li><code>
+                            for(let i = 0; i <= 10; i+=2){ <br>
+                                console.log(`Compte 2 par 2 : ${i}`); <br>
+                            };
+                        </code></li>
+                        <p>Exemple 3 : Array</p>
+                        <li><code>
+                            let users = [`Yro`,`Hada`,`Yato`,`Lya`]; <br>
+                            for(let i = 0; i < users.length; i++){ <br>
+                                console.log(users[i]); <br>
+                            };
+                        </code> Affiche le contenu du tableau</li>
+                    </ul>
+                    <ul>
+                        <h3>Boucle : "<span>WHILE</span>"</h3>
+                        <p>Syntaxe :</p>
+                        <li>"<span>while</span>" => expression qui vaut "true" ou "false"</li>
+                        <li><code>
+                            while(expression "true" ou "false"){ <br>
+                                // Tant que l'expression = "true", code à exécuter <br>
+                            };
+                        </code></li>
+                        <p>Exemple :</p>
+                        <li><code>
+                            let i = 0; <br>
+                            while(){ <br>
+                                console.log(i + `----`); <br>
+                                i++; <br>
+                            }
+                        </code></li>
+                        <li>"let i = 0" initialisation d'une variable à 0</li>
+                        <li>"while(i <= 5)" Tant que "i" est inférieur ou égal à 5</li>
+                        <li>"i++" incrémentation</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Fonctions en JavaScript</h2>
+                </div>
+                <div>
+                    <ul>
+                        <h3>Fonctions prédéfinies et utilsateurs</h3>
+                        <p>JavaScript possède des fonctions "function" qui sont des morceaux de codes encapsulés que l'on appel au besoin pour exécuter une action précise.</p>
+                        <p>On distingue 2 types de fonctions : <span>prédéfinies</span> & <span>utilisateurs</span></p>
+                    </ul>
                 </div>
             </section>
         </main>
