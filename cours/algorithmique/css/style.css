@@ -9,9 +9,17 @@ body{
     background-color: rgb(255, 202, 40);
 }
 
+/* container */
+
 #container{
     width: 100%;
 }
+
+/* Navbar style */
+
+/* header{
+    width: 100%;
+} */
 
 .navbar{
     width: 100%;
@@ -21,14 +29,20 @@ body{
 }
 
 .navbar nav{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: black;
 }
 
+.navbar ul{
+    width: 100%;
+}
+
 .navbar nav a{
-    padding: 2rem;
+    padding: 0 2rem;
     color: rgb(255, 202, 40);
     font-weight: bold;
 }
