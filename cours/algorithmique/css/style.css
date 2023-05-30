@@ -33,6 +33,18 @@ body{
     font-weight: bold;
 }
 
+#progress{
+    position: fixed;
+    top: 58px;
+    height: 7px;
+    z-index: 1001;
+    transition: ease 400ms;
+}
+
+.progress-bar{
+    background-color: white;
+}
+
 span{
    font-weight: bolder;
    text-decoration: underline !important;

@@ -26,6 +26,7 @@
                         <a href="#">Boucles</a> 
                         <a href="#">Fonctions</a>   
                     </ul>
+                    <div id="progress" class="progress-bar"></div>
                 </nav>
             </div>
         </header>
@@ -549,6 +550,150 @@
                         <h3>Fonctions prédéfinies et utilsateurs</h3>
                         <p>JavaScript possède des fonctions "function" qui sont des morceaux de codes encapsulés que l'on appel au besoin pour exécuter une action précise.</p>
                         <p>On distingue 2 types de fonctions : <span>prédéfinies</span> & <span>utilisateurs</span></p>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Fonctions prédéfinies sur des nombres</h3>
+                    <ul>
+                        <p>"<span>toFixed()</span>" : définit un nombre de chiffre à afficher après la virgule et retourne le résultat en chaîne de caractères.</p>
+                        <p>"<span>Math.pow()</span>" : permet de faire des calculs avec des puissances. (2² par exemple)</p>
+                        <p>"<span>Math.PI</span>" : permet d'obtenir le nombre PI avec 15 chiffres après la virgule.</p>
+                        <p>"<span>Math.floor</span>" : permet d'obtenir le nombre entier inférieur.</p>
+                        <p>"<span>Math.max</span>" : permet de retourner la valeur la plus haute.</p>
+                        <p>"<span>Math.min</span>" : permet de retourner la valeur la plus basse.</p>
+                        <p>"<span>Math.random()</span>" : retourne un nombre décimal entre 0 et 1 qui change à chaque rafraîchissement de page, le nombre est totalement aléatoire.</p>
+                        <p>Exemples :</p>
+                        <li>
+                            <span>toFixed()</span> : <br>
+                            <code>
+                                let testNumber = 1.5555555; <br>
+                                let number = testNumber.toFixed(2);
+                                console.log(number);
+                            </code>
+                            Affiche "1.56"
+                        </li>
+                        <li>
+                            <span>Math.pow()</span> : <br>
+                            <code>
+                                let testMath = Math.pow(2,3); <br>
+                                console.log(testMath);
+                            </code>
+                            Affiche "8"
+                        </li>
+                        <li>
+                            <span>Math.PI</span> : <br>
+                            <code>
+                                let MathPI = Math.PI; <br>
+                                console.log(MathPI);
+                            </code>
+                            Affiche "3.141592653589793"
+                        </li>
+                        <li>
+                            <span>Math.floor()</span> : <br>
+                            <code>
+                                let MathFloor = Math.floor(1.9); <br>
+                                console.log(MathFloor);
+                            </code>
+                            Affiche "1"
+                        </li>
+                        <li>
+                            <span>Math.max()</span> : <br>
+                            <code>
+                                let MathMax = Math.max(10,8,14,50,6); <br>
+                                console.log(MathMax);
+                            </code>
+                            Affiche "50"
+                        </li>
+                        <li>
+                            <span>Math.min()</span> : <br>
+                            <code>
+                                let MathMin = Math.min(10,8,14,50,6); <br>
+                                console.log(MathMin);
+                            </code>
+                            Affiche "6"
+                        </li>
+                        <li>
+                            <span>Math.random()</span> : <br>
+                            <code>
+                                let MathRandom = Math.random(); <br>
+                                console.log(MathRandom);
+                            </code>
+                            Affiche un nombre décimal aléatoire changeant à chaque rafraîchissement
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Fonctions prédéfinies sur des chaînes de caractères</h3>
+                    <ul>
+                        <p>"<span>.length</span>" : permet de retourner le nombre de caractères présents dans une chaîne de caractères</p>
+                        <p>"<span>.indexOf()</span>" : permet de retourner la position d'un caractère dans la chaîne (position de l'argument passé en paramètre)</p>
+                        <p>"<span>.toLowerCase()</span>" : permet de retourner la chaîne de caractères en minuscule</p>
+                        <p>"<span>.toUpperCase()</span>" : permet de retourner la chaîne de caractères en majuscule</p>
+                        <p>"<span>.trim()</span>" : permet de supprimer les espaces avant et après la chaîne de caractères</p>
+                        <p>"<span>.split()</span>" : permet de retourner un tableau d'une chaîne de caractères (string to array)</p>
+                        <p>Exemples :</p>
+                        <li>
+                            <span>.length</span> : <br>
+                            <code>
+                                let answer = `Hello`; <br>
+                                console.log(answer.length);
+                            </code>
+                            Affiche "5" (nombre de caractères présent dans la chaîne)
+                        </li>
+                        <li>
+                            <span>.indexOf()</span> : <br>
+                            <code>
+                                let answer = `Hello`; <br>
+                                console.log(answer.indexOf(`l`));
+                            </code>
+                            Affiche "2" (position du caractère dans la chaîne)
+                        </li>
+                        <li>
+                            <span>.toLowerCase()</span> : <br>
+                            <code>
+                                let answer = `HELLO`; <br>
+                                console.log(answer.toLowerCase());
+                            </code>
+                            Affiche "hello" 
+                        </li>
+                        <li>
+                            <span>.toUpperCase()</span> : <br>
+                            <code>
+                                let answer = `hello`; <br>
+                                console.log(answer.toUpperCase());
+                            </code>
+                            Affiche "HELLO" 
+                        </li>
+                        <li>
+                            <span>.trim()</span> : <br>
+                            <code>
+                                let answer = `     some text     `; <br>
+                                console.log(answer.trim());
+                            </code>
+                            Affiche "some text" au lieu de "     some text     "
+                        </li>
+                        <li>
+                            <span>.split()</span> : <br>
+                            <code>
+                                let words = `metro, bus, train`; <br>
+                                console.log(words.split(`,`));
+                            </code>
+                            Affiche "['metro', ' bus', ' train']", la virgule dans "split(`,`)" sert de séparateur entre chaques mots
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Fonctions utilisateurs</h3>
+                    <ul>
+                        <p>Un des grands principes en programmation est d'avoir un code dit "DRY" (Don't Repeat Yourself).</p>
+                        <p>Les fonctions sont des blocs de codes réutilisables et modifiables à volonté.</p>
+                        <p>Exemples :</p>
+                        <li><code>
+                            function myFunction(){ <br>
+                                console.log(`My first function`); <br>
+                            } <br>
+                            myFunction(); // Exécution de la fonction
+                        </code> Affiche "My first function"</li>
                     </ul>
                 </div>
             </section>

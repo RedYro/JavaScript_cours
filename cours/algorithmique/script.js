@@ -25,3 +25,18 @@ let ulArrayCoursBis = document.querySelector(`.array-js > :nth-child(3)`);
 let liArrayCoursBis = document.createElement(`li`);
 liArrayCoursBis.innerText = `${arrayMultiDimensional[0][1]} ${arrayMultiDimensional[1][1]}, ${arrayMultiDimensional[0][0]} ${arrayMultiDimensional[1][0]}, ${arrayMultiDimensional[0][2]} ${arrayMultiDimensional[1][2]}`;
 ulArrayCoursBis.appendChild(liArrayCoursBis);
+
+// Progress bar //
+
+let body = document.querySelector(`body`);
+let progressBarre = document.querySelector(`#progress`);
+
+body.clientHeight;
+window.scrollY;
+window.scrollY / body.clientHeight;
+
+window.addEventListener(`scroll`, function(){
+    let pourcentageScroll = this.window.scrollY / (body.clientHeight - this.innerHeight);
+    let roundScroll = Math.round(pourcentageScroll * 100);
+    progressBarre.style.setProperty('width', `${roundScroll}%`);
+})
